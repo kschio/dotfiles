@@ -18,6 +18,12 @@ sudo scutil --set HostName "$COMPUTER_NAME"
 sudo scutil --set LocalHostName "$COMPUTER_NAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
+# Set language and text formats
+defaults write NSGlobalDomain AppleLanguages -array "en" "de"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
 sudo systemsetup -settimezone "Europe/Berlin" > /dev/null
 
@@ -67,6 +73,9 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
+
+# Disable Notification Center and remove the menu bar icon
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 ###############################################################################
 # Keyboard & Input                                                            #
@@ -239,15 +248,12 @@ defaults write com.apple.dock wvous-br-corner -int 0
 # 11: Launchpad
 # 12: Notification Center
 # 13: Lock Screen
-
 # Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 defaults write com.apple.dock wvous-tl-modifier -int 0
-
 # Top right screen corner → Desktop
 defaults write com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
-
 # Bottom left screen corner → Start screen saver
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
