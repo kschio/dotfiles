@@ -5,7 +5,6 @@ mash = {"⌥", "⌃"}
 local spoons = {
     ConfigReloader = true,
     AppLauncher = true,
-    WindowManagement = false
 }
 
 for spoonName, enabled in pairs(spoons) do

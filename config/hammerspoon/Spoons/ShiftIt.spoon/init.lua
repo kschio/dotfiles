@@ -39,12 +39,12 @@ local units = {
   left50        = { x = 0.00, y = 0.00, w = 0.50, h = 1.00 },
   top50         = { x = 0.00, y = 0.00, w = 1.00, h = 0.50 },
   bot50         = { x = 0.00, y = 0.50, w = 1.00, h = 0.50 },
-  
+
   upleft50      = { x = 0.00, y = 0.00, w = 0.50, h = 0.50 },
   upright50     = { x = 0.50, y = 0.00, w = 0.50, h = 0.50 },
   botleft50     = { x = 0.00, y = 0.50, w = 0.50, h = 0.50 },
   botright50    = { x = 0.50, y = 0.50, w = 0.50, h = 0.50 },
-  
+
   maximum       = { x = 0.00, y = 0.00, w = 1.00, h = 1.00 },
 }
 
@@ -72,7 +72,7 @@ function resizeWindowInSteps(increment)
     noChange = true
     notMinWidth = w > wStep * 3
     notMinHeight = h > hStep * 3
-    
+
     snapLeft = x <= screen.x
     snapTop = y <= screen.y
     -- add one pixel in case of odd number of pixels
@@ -110,22 +110,22 @@ function resizeWindowInSteps(increment)
   hs.window.focusedWindow():move({x=x, y=y, w=w, h=h}, nil, true, 0)
 end
 
-function obj:left() move(units.left50, nil, true, 0) end
-function obj:right() move(units.right50, nil, true, 0) end
-function obj:up() move(units.top50, nil, true, 0) end
-function obj:down() move(units.bot50, nil, true, 0) end
-function obj:upleft() move(units.upleft50, nil, true, 0) end
-function obj:upright() move(units.upright50, nil, true, 0) end
-function obj:botleft() move(units.botleft50, nil, true, 0) end
-function obj:botright() move(units.botright50, nil, true, 0) end
+-- function obj:left() move(units.left50, nil, true, 0) end
+-- function obj:right() move(units.right50, nil, true, 0) end
+-- function obj:up() move(units.top50, nil, true, 0) end
+-- function obj:down() move(units.bot50, nil, true, 0) end
+-- function obj:upleft() move(units.upleft50, nil, true, 0) end
+-- function obj:upright() move(units.upright50, nil, true, 0) end
+-- function obj:botleft() move(units.botleft50, nil, true, 0) end
+-- function obj:botright() move(units.botright50, nil, true, 0) end
 
-function obj:maximum() move(units.maximum, nil, true, 0) end
+-- function obj:maximum() move(units.maximum, nil, true, 0) end
 
-function obj:toggleFullScreen() hs.window.focusedWindow():toggleFullScreen() end
-function obj:toggleZoom() hs.window.focusedWindow():toggleZoom() end
+-- function obj:toggleFullScreen() hs.window.focusedWindow():toggleFullScreen() end
+-- function obj:toggleZoom() hs.window.focusedWindow():toggleZoom() end
 function obj:center() hs.window.focusedWindow():centerOnScreen(nil, true, 0) end
-function obj:nextScreen() hs.window.focusedWindow():moveToScreen(hs.window.focusedWindow():screen():next(),false, true, 0) end
-function obj:previousScreen() hs.window.focusedWindow():moveToScreen(hs.window.focusedWindow():screen():previous(),false, true, 0) end
+-- function obj:nextScreen() hs.window.focusedWindow():moveToScreen(hs.window.focusedWindow():screen():next(),false, true, 0) end
+-- function obj:previousScreen() hs.window.focusedWindow():moveToScreen(hs.window.focusedWindow():screen():previous(),false, true, 0) end
 
 function obj:resizeOut() resizeWindowInSteps(true) end
 function obj:resizeIn() resizeWindowInSteps(false) end
@@ -158,20 +158,20 @@ function obj:bindHotkeys(mapping)
     for k,v in pairs(mapping) do self.mapping[k] = v end
   end
 
-  hs.hotkey.bind(self.mapping.left[1], self.mapping.left[2], function() self:left() end)
-  hs.hotkey.bind(self.mapping.right[1], self.mapping.right[2], function() self:right() end)
-  hs.hotkey.bind(self.mapping.up[1], self.mapping.up[2], function() self:up() end)
-  hs.hotkey.bind(self.mapping.down[1], self.mapping.down[2], function() self:down() end)
-  hs.hotkey.bind(self.mapping.upleft[1], self.mapping.upleft[2], function() self:upleft() end)
-  hs.hotkey.bind(self.mapping.upright[1], self.mapping.upright[2], function() self:upright() end)
-  hs.hotkey.bind(self.mapping.botleft[1], self.mapping.botleft[2], function() self:botleft() end)
-  hs.hotkey.bind(self.mapping.botright[1], self.mapping.botright[2], function() self:botright() end)
-  hs.hotkey.bind(self.mapping.maximum[1], self.mapping.maximum[2], function() self:maximum() end)
-  hs.hotkey.bind(self.mapping.toggleFullScreen[1], self.mapping.toggleFullScreen[2], function() self:toggleFullScreen() end)
-  hs.hotkey.bind(self.mapping.toggleZoom[1], self.mapping.toggleZoom[2], function() self:toggleZoom() end)
+  -- hs.hotkey.bind(self.mapping.left[1], self.mapping.left[2], function() self:left() end)
+  -- hs.hotkey.bind(self.mapping.right[1], self.mapping.right[2], function() self:right() end)
+  -- hs.hotkey.bind(self.mapping.up[1], self.mapping.up[2], function() self:up() end)
+  -- hs.hotkey.bind(self.mapping.down[1], self.mapping.down[2], function() self:down() end)
+  -- hs.hotkey.bind(self.mapping.upleft[1], self.mapping.upleft[2], function() self:upleft() end)
+  -- hs.hotkey.bind(self.mapping.upright[1], self.mapping.upright[2], function() self:upright() end)
+  -- hs.hotkey.bind(self.mapping.botleft[1], self.mapping.botleft[2], function() self:botleft() end)
+  -- hs.hotkey.bind(self.mapping.botright[1], self.mapping.botright[2], function() self:botright() end)
+  -- hs.hotkey.bind(self.mapping.maximum[1], self.mapping.maximum[2], function() self:maximum() end)
+  -- hs.hotkey.bind(self.mapping.toggleFullScreen[1], self.mapping.toggleFullScreen[2], function() self:toggleFullScreen() end)
+  -- hs.hotkey.bind(self.mapping.toggleZoom[1], self.mapping.toggleZoom[2], function() self:toggleZoom() end)
   hs.hotkey.bind(self.mapping.center[1], self.mapping.center[2], function() self:center() end)
-  hs.hotkey.bind(self.mapping.nextScreen[1], self.mapping.nextScreen[2], function() self:nextScreen() end)
-  hs.hotkey.bind(self.mapping.previousScreen[1], self.mapping.previousScreen[2], function() self:previousScreen() end)
+  -- hs.hotkey.bind(self.mapping.nextScreen[1], self.ma pping.nextScreen[2], function() self:nextScreen() end)
+  -- hs.hotkey.bind(self.mapping.previousScreen[1], self.mapping.previousScreen[2], function() self:previousScreen() end)
   hs.hotkey.bind(self.mapping.resizeOut[1], self.mapping.resizeOut[2], function() self:resizeOut() end)
   hs.hotkey.bind(self.mapping.resizeIn[1], self.mapping.resizeIn[2], function() self:resizeIn() end)
 
