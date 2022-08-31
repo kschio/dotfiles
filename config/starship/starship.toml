@@ -1,88 +1,66 @@
-# ~/.config/starship.toml
-add_newline = true
+format = "$directory$git_branch$git_metrics$nix_shell$package$character"
+add_newline = false
 
-[battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
-
-[[battery.display]]
-threshold = 30
-style = "bold red"
+[line_break]
+disabled = true
 
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[✖](bold red) "
-
-[cmd_duration]
-min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
-format = " took [$duration]($style)"
+success_symbol = "[λ](green)" # ➜
+error_symbol = "[λ](red)" # ✖
 
 [directory]
-truncation_length = 5
-format = "[$path]($style)[$lock_symbol]($lock_style) "
+read_only = " "
+truncation_length = 1
+
+[status]
+symbol = "🔴"
+format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
+map_symbol = true
+disabled = false
 
 [git_branch]
-format = " [$symbol$branch]($style) "
+style = "purple"
 symbol = " "
-style = "bold purple"
 
-[git_commit]
-commit_hash_length = 8
-style = "bold white"
-
-#[git_state]
-#progress_divider = " of "
-
-[git_status]
-style = "bright-white"
-format = "$all_status$ahead_behind"
-conflicted = "  "
-deleted = " 﫧"
-modified = "  ×${count} "
-stashed = "  ×${count} "
-staged = "  ×${count} "
-renamed = "  ×${count} "
-untracked = "  ×${count} "
-
-[hostname]
-ssh_only = false
-format = "<[$hostname]($style)>"
-trim_at = "-"
-style = "bold dimmed white"
-disabled = true
-
-[julia]
-format = "[$symbol$version]($style) "
-symbol = "ஃ "
-style = "bold green"
-
-[memory_usage]
-format = "$symbol[${ram}( | ${swap})]($style) "
-threshold = 70
-style = "bold dimmed white"
+[git_metrics]
 disabled = false
+added_style = "bold yellow"
+deleted_style = "bold red"
+
+# [git_status]
+# style = "bright-white"
+# format = "$all_status$ahead_behind"
+# conflicted = "  "
+# deleted = " 﫧"
+# modified = "  ×${count} "
+# stashed = "  ×${count} "
+# staged = "  ×${count} "
+# renamed = "  ×${count} "
+# untracked = "  ×${count} "
 
 [package]
-disabled = true
+format = "version [$version](bold green) "
+symbol = " "
 
-[python]
-format = "[$symbol$version]($style) "
-style = "bold green"
-
-[rust]
-format = "[$symbol$version]($style) "
-style = "bold green"
-
-[time]
-disabled = false
-format = "[$time]($style) "
-style = "dimmed white"
-
-[username]
-disabled = true
-#style_user = "bold dimmed blue"
-#show_always = false
+[nix_shell]
+symbol = " "
 
 [nodejs]
 symbol = " "
+format = 'via [$symbol]($style)'
+
+[rust]
+format = 'via [$symbol]($style)'
+
+[swift]
+symbol = "ﯣ "
+format = 'via [$symbol]($style)'
+
+[elixir]
+symbol = " "
+
+[php]
+symbol = " "
+
+[memory_usage]
+symbol = " "
