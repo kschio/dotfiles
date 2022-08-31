@@ -1,5 +1,6 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
@@ -15,7 +16,7 @@ plugins=(
 # disable analytics
 export HOMEBREW_NO_ANALYTICS=1
 
-fpath=($fpath "$HOME/.zfunctions")
+fpath=($fpath "/Users/ksch/.zfunctions")
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
@@ -35,12 +36,16 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
 fi
-export PATH=$(pyenv root)/shims:$PATH
+PATH=$(pyenv root)/shims:$PATH
+
 
 # Android SDK
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+# Path
+export PATH="$HOME/.local/bin:$PATH"
 
 # fnm node version manager
 eval "$(fnm env --use-on-cd)"
@@ -48,12 +53,13 @@ eval "$(fnm env --use-on-cd)"
 # Starship
 eval "$(starship init zsh)"
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# Auto title
 DISABLE_AUTO_TITLE="true"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Paths
-export PATH="$HOME/.local/bin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
