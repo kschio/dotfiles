@@ -1,6 +1,5 @@
 # Start with system path
 # Retrieve it from getconf, otherwise it's just current $PATH
-
 is-executable getconf && PATH=$($(command -v getconf) PATH)
 
 export HOMEBREW_PREFIX=$($DOTFILES_DIR/bin/is-supported $DOTFILES_DIR/bin/is-arm64 /opt/homebrew /usr/local)
