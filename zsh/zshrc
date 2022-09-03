@@ -22,10 +22,6 @@ fpath=($fpath "/Users/ksch/.zfunctions")
 autoload -U promptinit; promptinit
 prompt spaceship
 
-# NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # Open JDK
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
