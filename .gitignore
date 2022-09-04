@@ -2,3 +2,5 @@
 .DS_Store
 system/.custom
 system/.exports
+nvim/plugin/packer_compiled.lua
+__pycache__
