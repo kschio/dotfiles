@@ -1,0 +1,25 @@
+# make sure fish works in tmux
+set -g default-terminal "screen-256color"
+set -sa terminal-overrides ',xterm-256color:RGB'
+# so that escapes register immidiately in vim
+set -sg escape-time 1
+set -g focus-events on
+
+###########################
+#         THEME           #
+###########################
+# Colors
+BACKGROUND="#262626"
+FOREGROUND=white
+HIGHLIGHT="#ee5396"
+ACTIVITY="#78A9FF"
+
+set -g status-style fg=black,bg=default
+set -g status-left ""
+set -g status-right ""
+set -g status-justify centre
+set -g status-position bottom
+set -g pane-active-border-style bg=default,fg=default
+set -g pane-border-style fg=default
+set -g window-status-current-format "#[fg=cyan] #[fg=black]#[bg=cyan] #I #[bg=brightblack]#[fg=brightwhite] #W #[fg=brightblack]#[bg=default] #[bg=default] #[fg=magenta] #[fg=white]"
+set -g window-status-format "#[fg=magenta] #[fg=black]#[bg=magenta] #I #[bg=brightblack]#[fg=brightwhite] #W #[fg=brightblack]#[bg=default]"
