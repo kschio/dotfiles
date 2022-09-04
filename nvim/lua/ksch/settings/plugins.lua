@@ -71,14 +71,13 @@ return packer.startup(function(use)
     use "rafamadriz/friendly-snippets"
     use "saadparwaiz1/cmp_luasnip"
     use "TovarishFin/vim-solidity"
-    use "tpope/vim-fugitive"
     use "wbthomason/packer.nvim"
     use "williamboman/mason-lspconfig.nvim"
     use "williamboman/mason.nvim"
     use "windwp/nvim-autopairs"
     use "windwp/nvim-ts-autotag"
 
-    -- personal
+    -- extras
     use {
         "akinsho/toggleterm.nvim",
         tag = "v2.*",
@@ -94,4 +93,9 @@ return packer.startup(function(use)
     use "Pocco81/true-zen.nvim"
     use "ray-x/lsp_signature.nvim"
     use "renerocksai/telekasten.nvim"
+    use "renerocksai/telekasten.nvim"
+    use {
+        "TimUntersberger/neogit",
+        requires = "nvim-lua/plenary.nvim",
+    }
 end)

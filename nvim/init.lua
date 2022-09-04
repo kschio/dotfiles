@@ -27,8 +27,8 @@ require "ksch.appearance.lualine"
 require "ksch.appearance.true-zen"
 
 -- Git
-require "ksch.misc.gitsigns"
-require "ksch.misc.vim-fugitive"
+require "ksch.git.gitsigns"
+require "ksch.git.neogit"
 
 -- LSP
 require "ksch.lsp.lspconfig"
@@ -43,8 +43,8 @@ require "ksch.navigation.trouble"
 require "ksch.navigation.telescope"
 
 -- Markdown
-require "ksch.misc.glow"
-require "ksch.misc.markdown-preview"
+require "ksch.markdown.glow"
+require "ksch.markdown.markdown-preview"
 
 -- Notes
 require "ksch.misc.telekasten"

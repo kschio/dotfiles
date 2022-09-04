@@ -1,5 +1,7 @@
 local ok, wk = pcall(require, "which-key")
-if (not ok) then return end
+if not ok then
+    return
+end
 
 local setup = {
     plugins = {
@@ -90,7 +92,7 @@ local mappings = {
         O = { "<cmd>Telescope vim_options<cr>", "Options" },
         r = { "<cmd>Telescope resume<cr>", "Resume" },
     },
-    g = {
+    d = {
         name = "+Lsp",
         a = { "<cmd>LSoutlineToggle<cr>", "Code outline" },
         d = { "<cmd>Lspsaga preview_definition<cr>", "Preview definition" },
@@ -102,6 +104,10 @@ local mappings = {
         r = { "<cmd>Lspsaga rename<cr>", "Rename" },
         s = { "<cmd>Lspsaga signature_help<cr>", "Signature help" },
         x = { "<cmd>Lspsaga code_action<cr>", "Code action" },
+    },
+    g = {
+        name = "+Git",
+        s = { "<cmd>Neogit<CR>", "Neogit" },
     },
     m = {
         name = "+Markdown",
