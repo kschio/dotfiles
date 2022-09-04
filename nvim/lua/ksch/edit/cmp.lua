@@ -1,5 +1,7 @@
 local ok, cmp = pcall(require, "cmp")
-if (not ok) then return end
+if not ok then
+    return
+end
 
 local luasnip = require "luasnip"
 local icons = require "ksch.appearance.icons"

@@ -1,8 +1,12 @@
 local ok, mason = pcall(require, "mason")
-if (not ok) then return end
+if not ok then
+    return
+end
 
 local ok2, lspconfig = pcall(require, "mason-lspconfig")
-if (not ok2) then return end
+if not ok2 then
+    return
+end
 
 mason.setup {
     ui = {
@@ -25,9 +29,9 @@ lspconfig.setup {
         "sqls",
         "tailwindcss",
         "taplo",
-        'eslint_d',
-        'prettierd',
-        'typescript-language-server',
+        "eslint_d",
+        "prettierd",
+        "typescript-language-server",
         "tsserver",
         "yamlls",
     },

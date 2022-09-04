@@ -1,6 +1,7 @@
 local ok, gomove = pcall(require, "gomove")
-
-if (not ok) then return end
+if not ok then
+    return
+end
 
 gomove.setup {
     map_defaults = false,

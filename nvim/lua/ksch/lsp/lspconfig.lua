@@ -1,5 +1,7 @@
 local ok, nvim_lsp = pcall(require, "lspconfig")
-if (not ok) then return end
+if not ok then
+    return
+end
 
 local icons = require "ksch.appearance.icons"
 local protocol = require "vim.lsp.protocol"

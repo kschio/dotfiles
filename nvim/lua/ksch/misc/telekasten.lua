@@ -1,5 +1,7 @@
 local ok, telekasten = pcall(require, "telekasten")
-if (not ok) then return end
+if not ok then
+    return
+end
 
 local home = vim.fn.expand "/Users/ksch/Notes"
 

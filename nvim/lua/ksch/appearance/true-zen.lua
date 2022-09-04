@@ -1,6 +1,7 @@
 local ok, truezen = pcall(require, "true-zen")
-
-if (not ok) then return end
+if not ok then
+    return
+end
 
 truezen.setup {
     modes = { -- configurations per mode

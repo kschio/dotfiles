@@ -1,5 +1,7 @@
 local ok, dashboard = pcall(require, "dashboard")
-if (not ok) then return end
+if not ok then
+    return
+end
 
 local version = vim.version()
 local title = string.format("nvim v%s.%s.%s", version["major"], version["minor"], version["patch"])
@@ -74,7 +76,7 @@ dashboard.custom_center = {
 }
 dashboard.custom_footer = {
     "",
---    "龍 Packer loaded " .. plugin_count .. " plugins",
+    --    "龍 Packer loaded " .. plugin_count .. " plugins",
 }
 
 -- mappings
