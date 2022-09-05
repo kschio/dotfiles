@@ -107,12 +107,13 @@ local mappings = {
     },
     g = {
         name = "+Git",
-        s = { "<cmd>Neogit<CR>", "Neogit" },
+        b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle blame" },
+        s = { "<cmd>Neogit<cr>", "Status" },
     },
     m = {
         name = "+Markdown",
-        ["o"] = { "<Plug>MarkdownPreview<cr>", "Markdown Preview" },
-        ["p"] = { "<cmd>Glow<cr>", "Markdown Preview inline" },
+        ["o"] = { "<Plug>MarkdownPreview<cr>", "Markdown preview" },
+        ["p"] = { "<cmd>Glow<cr>", "Markdown preview inline" },
     },
     p = {
         name = "+Pane split",
