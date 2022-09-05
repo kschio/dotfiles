@@ -1,0 +1,34 @@
+shell = "zsh"
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.oh-my-zsh]
+github = "ohmyzsh/ohmyzsh"
+
+[plugins.alias-tips]
+github = "djui/alias-tips"
+apply = ["defer"]
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+[plugins.zsh-better-npm-completion]
+github = "lukechilds/zsh-better-npm-completion"
+apply = ["defer"]
+
+[plugins.auto-notify]
+github = "marzocchi/zsh-notify"
+apply = ["defer"]
+
+[plugins.starship]
+inline = 'eval "$(starship init zsh)"'
+
+[templates]
+defer = { value = 'zsh-defer source "{{ file }}"', each = true }
