@@ -93,7 +93,6 @@ return packer.startup(function(use)
     use "Pocco81/true-zen.nvim"
     use "ray-x/lsp_signature.nvim"
     use "renerocksai/telekasten.nvim"
-    use "renerocksai/telekasten.nvim"
     use {
         "TimUntersberger/neogit",
         requires = "nvim-lua/plenary.nvim",
