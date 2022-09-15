@@ -3,12 +3,20 @@ shell = "zsh"
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
-[plugins.oh-my-zsh]
-github = "ohmyzsh/ohmyzsh"
-
 [plugins.alias-tips]
 github = "djui/alias-tips"
 apply = ["defer"]
+
+[plugins.oh-my-zsh]
+github = "ohmyzsh/ohmyzsh"
+use = [
+    "lib/completion.zsh",
+    "lib/clipboard.zsh",
+    "lib/git.zsh",
+    "lib/directories.zsh",
+    "plugins/git/git.plugin.zsh",
+    "plugins/colored-man-pages/colored-man-pages.plugin.zsh",
+    ]
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
@@ -18,6 +26,9 @@ apply = ["defer"]
 github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
 apply = ["defer"]
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
 
 [plugins.zsh-better-npm-completion]
 github = "lukechilds/zsh-better-npm-completion"
