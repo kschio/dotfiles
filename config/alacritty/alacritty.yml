@@ -5,15 +5,15 @@ window:
   decorations: Buttonless
   opacity: 1.0
   padding:
-    x: 30
-    y: 30
+    x: 20
+    y: 20
 
 scrolling:
   history: 100000
   multiplier: 6
 
 font:
-  size: 13.0
+  size: 14.0
   normal:
     family: Liga SFMono Nerd Font
     style: Regular
