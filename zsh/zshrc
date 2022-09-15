@@ -1,17 +1,9 @@
-export ZSH="$HOME/.local/share/sheldon/repos/github.com/ohmyzsh/ohmyzsh"
+\command -v sheldon &> /dev/null || \
+    (curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
+    | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin)
 
-plugins=(
-  git
-  npm
-  yarn
-  nvm
-  sudo
-  ssh-agent
-  gpg-agent
-  macos
-  common-aliases
-  command-not-found
-)
+autoload -Uz compinit
+compinit -i
 
 # sheldon
 eval "$(sheldon source)"
@@ -59,3 +51,6 @@ fi
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# notify
+[ -f $HOME/.local/share/sheldon/repos/github.com/marzocchi/zsh-notify ] && source $HOME/.local/share/sheldon/repos/github.com/marzocchi/zsh-notify/notify.plugin.zsh
