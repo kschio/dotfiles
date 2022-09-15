@@ -5,26 +5,30 @@ end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local formatting = null_ls.builtins.formatting
+local actions = null_ls.builtins.code_actions
+local completion = null_ls.builtins.completion
+local diagnostics = null_ls.builtins.diagnostics
 
 local my_sources = {
     -- code actions
-    null_ls.builtins.code_actions.gitsigns,
+    actions.gitsigns,
+    actions.shellcheck,
 
     -- completion
-    null_ls.builtins.completion.luasnip,
+    completion.luasnip,
 
     -- diagnostics
-    null_ls.builtins.diagnostics.eslint_d,
-    null_ls.builtins.diagnostics.mypy,
-    null_ls.builtins.diagnostics.selene,
-    null_ls.builtins.diagnostics.solhint,
+    diagnostics.eslint_d,
+    diagnostics.selene,
+    diagnostics.solhint,
 
     -- formatting
+    formatting.terraform_fmt,
     formatting.black,
     formatting.eslint_d,
-    formatting.fixjson,
     formatting.prettier,
     formatting.stylua,
+    formatting.markdownlint,
 }
 
 null_ls.setup {

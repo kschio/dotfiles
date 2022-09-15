@@ -52,9 +52,6 @@ saga.init_lsp_saga {
         virtual_text = true,
     },
 
-    -- definition
-    definition_preview_icon = " ",
-
     -- diagnostics
     diagnostic_header = { " ", " ", " ", " " },
 

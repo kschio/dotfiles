@@ -59,6 +59,11 @@ telescope.setup {
         -- Developer configurations: Not meant for general override
         buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
     },
+    pickers = {
+        colorscheme = {
+            enable_preview = true,
+        },
+    },
 }
 
 local extensions = {

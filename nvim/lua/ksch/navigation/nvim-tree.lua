@@ -23,7 +23,7 @@ tree.setup {
     },
     disable_netrw = true,
     filters = {
-        dotfiles = true,
+        dotfiles = false,
     },
     git = {
         ignore = false,
@@ -50,15 +50,14 @@ tree.setup {
                     symlink_open = "",
                 },
                 git = {
-                    deleted = "",
-                    ignored = "◌",
-                    renamed = "➜",
-                    staged = "✓",
-                    unmerged = "",
-                    unstaged = "✗",
-                    untracked = "★",
+                    unstaged  = "ﰣ",
+                    staged    = "",
+                    unmerged  = "",
+                    renamed   = "➜",
+                    untracked = "",
+                    deleted   = "ﯰ",
+                    ignored   = "",
                 },
-                symlink = "",
             },
             show = {
                 file = true,

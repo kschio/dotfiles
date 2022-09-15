@@ -3,12 +3,19 @@ if not ok then
     return
 end
 
-local ok2, lspconfig = pcall(require, "mason-lspconfig")
-if not ok2 then
+local okLspConfig, lspconfig = pcall(require, "mason-lspconfig")
+if not okLspConfig then
+    return
+end
+
+local okToolInstaller, toolinstaller = pcall(require, "mason-tool-installer")
+if not okToolInstaller then
     return
 end
 
 mason.setup {
+    check_outdated_packages_on_open = true,
+    border = "none",
     ui = {
         icons = {
             package_installed = "✓",
@@ -18,21 +25,34 @@ mason.setup {
     },
 }
 
-lspconfig.setup {
+lspconfig.setup {}
+
+toolinstaller.setup {
     ensure_installed = {
-        "cssls",
-        "dockerls",
-        "gopls",
-        "marksman",
-        "pyright",
-        "sumneko_lua",
-        "sqls",
-        "tailwindcss",
-        "taplo",
-        "eslint_d",
-        "prettierd",
+        -- LSP
+        "bash-language-server",
+        "dockerfile-language-server",
+        "json-lsp",
         "typescript-language-server",
-        "tsserver",
-        "yamlls",
+        "texlab",
+        "lua-language-server",
+        "pyright",
+        "terraform-ls",
+        "yaml-language-server",
+        -- Formatter
+        "black",
+        "prettier",
+        "stylua",
+        -- Linter
+        "eslint_d",
+        "shellcheck",
+        "tflint",
+        "vale",
+        "yamllint",
+        -- DAP
+        "debugpy",
     },
+    auto_update = false,
+    run_on_start = true,
+    start_delay = 3000,
 }

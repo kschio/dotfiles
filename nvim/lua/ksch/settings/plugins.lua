@@ -72,12 +72,15 @@ return packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip"
     use "TovarishFin/vim-solidity"
     use "wbthomason/packer.nvim"
-    use "williamboman/mason-lspconfig.nvim"
-    use "williamboman/mason.nvim"
+    use {
+        "williamboman/mason.nvim",
+        requires = {
+            "williamboman/mason-lspconfig.nvim",
+            "WhoIsSethDaniel/mason-tool-installer.nvim",
+        },
+    }
     use "windwp/nvim-autopairs"
     use "windwp/nvim-ts-autotag"
-
-    -- extras
     use {
         "akinsho/toggleterm.nvim",
         tag = "v2.*",
@@ -97,4 +100,8 @@ return packer.startup(function(use)
         "TimUntersberger/neogit",
         requires = "nvim-lua/plenary.nvim",
     }
+    use { "theHamsta/nvim-dap-virtual-text" }
+    use { "rcarriga/nvim-dap-ui" }
+    use { "mfussenegger/nvim-dap" }
+    use { "RRethy/nvim-base16" }
 end)

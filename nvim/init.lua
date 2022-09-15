@@ -35,7 +35,6 @@ require "ksch.lsp.lspconfig"
 require "ksch.lsp.lspsaga"
 require "ksch.lsp.lspsignature"
 require "ksch.lsp.mason"
-require "ksch.lsp.null-ls"
 
 -- Navigation
 require "ksch.navigation.nvim-tree"
@@ -53,3 +52,8 @@ require "ksch.misc.telekasten"
 require "ksch.settings.bufdel"
 require "ksch.settings.whichkey"
 require "ksch.settings.toggleterm"
+
+-- Debug
+require "ksch.misc.dap"
+
+require "ksch.lsp.null-ls"
