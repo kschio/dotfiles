@@ -54,3 +54,6 @@ fi
 
 # notify
 [ -f $HOME/.local/share/sheldon/repos/github.com/marzocchi/zsh-notify ] && source $HOME/.local/share/sheldon/repos/github.com/marzocchi/zsh-notify/notify.plugin.zsh
+
+# rbenv
+eval "$(rbenv init - zsh)"
