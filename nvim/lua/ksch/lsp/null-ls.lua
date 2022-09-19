@@ -19,8 +19,6 @@ local my_sources = {
 
     -- diagnostics
     diagnostics.eslint_d,
-    diagnostics.selene,
-    diagnostics.solhint,
 
     -- formatting
     formatting.terraform_fmt,

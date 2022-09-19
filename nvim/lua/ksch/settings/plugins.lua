@@ -104,4 +104,7 @@ return packer.startup(function(use)
     use { "rcarriga/nvim-dap-ui" }
     use { "mfussenegger/nvim-dap" }
     use { "RRethy/nvim-base16" }
+    use { "sam4llis/nvim-tundra" }
+    use { "cranberry-clockworks/coal.nvim" }
+    use { "kvrohit/rasmus.nvim" }
 end)
