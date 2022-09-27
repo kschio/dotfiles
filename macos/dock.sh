@@ -1,8 +1,8 @@
 #!/bin/sh
 
 dockutil --no-restart --remove all
+dockutil --no-restart --add "/Applications/Arc.app"
 dockutil --no-restart --add "/Applications/Google Chrome.app"
-dockutil --no-restart --add "/Applications/Safari.app"
 dockutil --no-restart --add "/Applications/Mimestream.app"
 dockutil --no-restart --add "/Applications/WhatsApp.app"
 dockutil --no-restart --add "/Applications/Notion.app"
