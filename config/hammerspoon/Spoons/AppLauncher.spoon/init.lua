@@ -6,7 +6,7 @@ obj.name = "AppLauncher"
 obj.version = "1.0"
 
 function obj:start()
-    hs.hotkey.bind(mash, "c", function() hs.application.launchOrFocus("Google Chrome") end)
+    hs.hotkey.bind(mash, "c", function() hs.application.launchOrFocus("Arc") end)
     hs.hotkey.bind(mash, "e", function() hs.application.launchOrFocus("Visual Studio Code") end)
     hs.hotkey.bind(mash, "f", function() hs.application.launchOrFocus("Finder") end)
     hs.hotkey.bind(mash, "m", function() hs.application.launchOrFocus("Mimestream") end)
