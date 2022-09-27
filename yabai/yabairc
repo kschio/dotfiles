@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# find "$HOME/.config/yabai" - type f -perm +111 -exec {} \;
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
@@ -6,11 +7,11 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 declare -A gaps
 declare -A color
 
-gaps["top"]="10"
-gaps["bottom"]="10"
-gaps["left"]="10"
-gaps["right"]="10"
-gaps["inner"]="10"
+gaps["top"]="20"
+gaps["bottom"]="20"
+gaps["left"]="20"
+gaps["right"]="20"
+gaps["inner"]="20"
 
 color["focused"]="0xE0808080"
 color["normal"]="0x00010101"
@@ -43,11 +44,30 @@ yabai -m config mouse_action1               move
 yabai -m config mouse_action2               resize
 
 # Spaces
-yabai -m space 1 --label social
-yabai -m space 2 --label browser
-yabai -m space 3 --label coding
-yabai -m space 4 --label design
-yabai -m space 5 --label misc
+yabai -m space 1 --label social  #  聆
+yabai -m space 2 --label browser # 
+yabai -m space 3 --label coding  # 
+yabai -m space 4 --label design  # 
+yabai -m space 5 --label misc    #   ﴯ
+
+# Window
+yabai -m config mouse_follows_focus          off
+yabai -m config focus_follows_mouse          off
+yabai -m config window_placement             second_child
+yabai -m config window_topmost               off
+yabai -m config window_opacity               off
+yabai -m config window_opacity_duration      0.0
+yabai -m config window_shadow                on
+yabai -m config window_border                off
+yabai -m config window_border_placement      inset
+yabai -m config window_border_width          6
+yabai -m config window_border_radius         -1.0
+yabai -m config active_window_border_topmost off
+yabai -m config active_window_border_color   0xFF000000
+yabai -m config normal_window_border_color   0xFF303246
+yabai -m config insert_window_border_color   0xffd75f5f
+yabai -m config active_window_opacity        1.0
+yabai -m config normal_window_opacity        0.70
 
 # Apps
 yabai -m rule --add label="1Password" app="^1Password$" sticky=on manage=off
@@ -55,15 +75,16 @@ yabai -m rule --add label="CleanMyMac X" app="^CleanMyMac X$" sticky=on manage=o
 yabai -m rule --add label="Microsoft Teams" app="^Microsoft Teams$" manage=off
 yabai -m rule --add app="^Mimestream$" manage=off
 yabai -m rule --add label="Slack" app="^Slack$" manage=off
-yabai -m rule --add label="Slack" app="^Discord$" manage=off
+yabai -m rule --add label="Discord" app="^Discord$" manage=off
 yabai -m rule --add label="Spotify" app="^Spotify$" sticky=on manage=off
 yabai -m rule --add label="Stats" app="^Stats$" sticky=on manage=off
 yabai -m rule --add app="^zoom.us$" manage=off
 yabai -m rule --add app="^WhatsApp" manage=off
 yabai -m rule --add label="Fig" app="^fig$" manage=off border=off
-yabai -m rule --add app="^Dash" manage=off
+yabai -m rule --add app="^Dash$" manage=off
 
 # Browser
+yabai -m rule --add label="Arc" app="^Arc$" manage=on border=off
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off opacity=1.0
 yabai -m rule --add label="Firefox" app="^Firefox$" opacity=1.0
 
@@ -73,10 +94,16 @@ yabai -m rule --add label="Activity Monitor" app="^Activity Monitor$" manage=off
 yabai -m rule --add label="App Store" app="^App Store$" manage=off
 yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
 yabai -m rule --add label="Calendar" app="^Calendar$" manage=off
+yabai -m rule --add label="Books" app="^Books$" manage=off
+yabai -m rule --add label="TV" app="^TV$" manage=off
+yabai -m rule --add label="Music" app="^Music$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" manage=off sticky=on
 yabai -m rule --add label="Installer" app="^Installer$" sticky=on manage=off
 yabai -m rule --add label="Photo Booth" title="^Photo Booth$" manage=off
 yabai -m rule --add label="Software Update" title="Software Update" manage=off
 yabai -m rule --add label="System Preferences" app="^System Preferences$" title=".*" manage=off
+
+# Statusbar spacing
+yabai -m config external_bar all:26:0
 
 echo "yabai configuration loaded.."
