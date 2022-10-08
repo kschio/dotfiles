@@ -107,4 +107,5 @@ return packer.startup(function(use)
     use { "sam4llis/nvim-tundra" }
     use { "cranberry-clockworks/coal.nvim" }
     use { "kvrohit/rasmus.nvim" }
+    use { "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" }
 end)
