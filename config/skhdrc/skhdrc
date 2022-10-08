@@ -44,7 +44,8 @@ lctrl + alt - e : yabai -m space --balance
 # Enable / Disable gaps in current workspace
 lctrl + alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
-# Rotate on X and Y Axis
+# Rotate
+ctrl + alt - r : yabai -m space --rotate 90
 ctrl + alt - x : yabai -m space --mirror x-axis
 ctrl + alt - y : yabai -m space --mirror y-axis
 
