@@ -17,9 +17,6 @@ local my_sources = {
     -- completion
     completion.luasnip,
 
-    -- diagnostics
-    diagnostics.eslint_d,
-
     -- formatting
     formatting.terraform_fmt,
     formatting.black,
