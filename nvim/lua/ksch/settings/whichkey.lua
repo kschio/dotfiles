@@ -68,7 +68,7 @@ local opts = {
 }
 
 local mappings = {
-    ["<leader>"] = { "<cmd>Telescope find_files hidden=false no_ignore=false<cr>", "Files" },
+    ["<leader>"] = { "<cmd>Telescope find_files hidden=true no_ignore=false<cr>", "Files" },
     n = { "<cmd>NvimTreeToggle<cr>", "Tree toggle" },
     e = { "<cmd>NvimTreeFocus<cr>", "Tree focus" },
     w = { "<cmd>write<cr>", "Quick save" },
