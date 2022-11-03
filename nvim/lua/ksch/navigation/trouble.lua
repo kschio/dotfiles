@@ -4,12 +4,16 @@ if not ok then
 end
 
 trouble.setup {
+    mode = "document_diagnostics",
+    auto_open = false,
     signs = {
-        error = "",
-        hint = "",
-        information = "",
-        warning = "",
+        error = "",
+        warning = "",
+        hint = "",
+        information = "",
+        other = "﫠",
     },
+    use_diagnostic_signs = true,
 }
 
 -- mappings
