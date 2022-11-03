@@ -85,10 +85,12 @@ yabai -m rule --add label="Dash" app="^Dash$" manage=off
 yabai -m rule --add label="Setapp" app="^Setapp$" manage=off
 yabai -m rule --add label="HP Easy Scan" app="^HP Easy Scan$" manage=off
 yabai -m rule --add label="Tower" app="^Tower$" manage=off
+yabai -m rule --add label="Kaleidoscope" app="^Kaleidoscope$" manage=off
 
 # Browser
 yabai -m rule --add label="Arc" app="^Arc$" manage=on border=off
-yabai -m rule --add label="Google Chrome" app="^Arc$" manage=on border=off
+yabai -m rule --add label="Google Chrome" app="^Google 
+Chrome$" manage=on border=off
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off opacity=1.0
 yabai -m rule --add label="Firefox" app="^Firefox$" opacity=1.0
 
