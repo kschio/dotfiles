@@ -36,6 +36,7 @@ return packer.startup(function(use)
     use "glepnir/dashboard-nvim"
     use "glepnir/lspsaga.nvim"
     use "hrsh7th/cmp-buffer"
+    use 'onsails/lspkind-nvim'
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
     use "hrsh7th/cmp-path"
@@ -86,7 +87,7 @@ return packer.startup(function(use)
         tag = "v2.*",
     }
     use "anuvyklack/hydra.nvim"
-    use "B4mbus/oxocarbon-lua.nvim"
+    use { "shaunsingh/oxocarbon.nvim", run = "./install.sh" }
     use "booperlv/nvim-gomove"
     use "ellisonleao/glow.nvim"
     use "folke/todo-comments.nvim"
