@@ -1,5 +1,3 @@
-require "impatient"
-
 -- Core
 require "ksch.settings.options"
 require "ksch.settings.mappings"
@@ -32,11 +30,7 @@ require "ksch.git.neogit"
 require "ksch.git.diffview"
 
 -- LSP
-require "ksch.lsp.lspconfig"
-require "ksch.lsp.lspsaga"
-require "ksch.lsp.lspsignature"
-require "ksch.lsp.mason"
-require "ksch.lsp.null-ls"
+require "ksch.lsp"
 
 -- Navigation
 require "ksch.navigation.nvim-tree"
