@@ -3,17 +3,17 @@ env:
 
 window:
   decorations: Buttonless
-  opacity: 1.0
+  opacity: 1
   padding:
-    x: 20
-    y: 20
+    x: 30
+    y: 30
 
 scrolling:
   history: 100000
   multiplier: 6
 
 font:
-  size: 14.0
+  size: 14.5
   normal:
     family: Liga SFMono Nerd Font
     style: Regular
@@ -75,5 +75,4 @@ colors:
     white: "0xacb0d0"
 
 mouse:
-    hide_when_typing: true
-
+  hide_when_typing: true
