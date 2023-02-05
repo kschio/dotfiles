@@ -88,9 +88,8 @@ yabai -m rule --add label="Tower" app="^Tower$" manage=off
 yabai -m rule --add label="Kaleidoscope" app="^Kaleidoscope$" manage=off
 
 # Browser
-yabai -m rule --add label="Arc" app="^Arc$" manage=on border=off
-yabai -m rule --add label="Google Chrome" app="^Google 
-Chrome$" manage=on border=off
+yabai -m rule --add app="^Arc$" title="^(Account|General|Shortcuts|Little Arc|Previews|Updates|Archive|Site Settings|Advanced)$" manage=off
+yabai -m rule --add label="Google Chrome" app="^Google Chrome$" manage=on border=off
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off opacity=1.0
 yabai -m rule --add label="Firefox" app="^Firefox$" opacity=1.0
 
