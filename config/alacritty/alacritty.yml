@@ -42,6 +42,10 @@ cursor:
     shape: Beam
     blinking: Always
   unfocused_hollow: false
+  thickness: 0.3
+  blink_interval: 750
+  vi_mode_style:
+    shape: Beam
 
 shell:
   program: /bin/zsh
