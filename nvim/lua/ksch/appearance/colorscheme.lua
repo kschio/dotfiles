@@ -14,3 +14,11 @@
 
 vim.cmd "colorscheme oxocarbon"
 -- vim.g.oxocarbon_lua_keep_terminal = true
+
+-- vim.opt.background = "dark"
+-- vim.g.enfocado_style = "neon"
+-- vim.cmd "colorscheme enfocado"
+--
+-- require("noirbuddy").setup {
+--   preset = "minimal",
+-- }

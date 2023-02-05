@@ -27,7 +27,6 @@ require "ksch.appearance.true-zen"
 -- Git
 require "ksch.git.gitsigns"
 require "ksch.git.neogit"
-require "ksch.git.diffview"
 
 -- LSP
 require "ksch.lsp"

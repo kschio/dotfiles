@@ -32,6 +32,13 @@ cmd [[
   augroup end
 ]]
 
+cmd [[
+  augroup enfocado_customization
+    autocmd!
+      autocmd ColorScheme enfocado ++nested highlight Normal ctermbg=NONE guibg=NONE
+  augroup END
+]]
+
 return {
     hide_statusline = function()
         local api = vim.api

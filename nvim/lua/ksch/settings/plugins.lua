@@ -36,7 +36,7 @@ return packer.startup(function(use)
     use "glepnir/dashboard-nvim"
     use "glepnir/lspsaga.nvim"
     use "hrsh7th/cmp-buffer"
-    use 'onsails/lspkind-nvim'
+    use "onsails/lspkind-nvim"
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
     use "hrsh7th/cmp-path"
@@ -105,8 +105,10 @@ return packer.startup(function(use)
     use { "rcarriga/nvim-dap-ui" }
     use { "mfussenegger/nvim-dap" }
     use { "RRethy/nvim-base16" }
-    use { "sam4llis/nvim-tundra" }
     use { "cranberry-clockworks/coal.nvim" }
     use { "kvrohit/rasmus.nvim" }
-    use { "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" }
+    use {
+        "jesseleite/nvim-noirbuddy",
+        requires = { "tjdevries/colorbuddy.nvim", branch = "dev" },
+    }
 end)
