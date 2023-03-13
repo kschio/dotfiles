@@ -11,9 +11,14 @@ eval "$(sheldon source)"
 # disable analytics
 export HOMEBREW_NO_ANALYTICS=1
 
+# homebrew
+export PATH="/opt/homebrew/sbin:$PATH"
+
+# home local path
+export PATH="$HOME/.local/bin:$PATH"
+
 # local path
-PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
-export PATH
+export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 
 # open jdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
@@ -31,9 +36,6 @@ PATH=$(pyenv root)/shims:$PATH
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-
-# path
-export PATH="$HOME/.local/bin:$PATH"
 
 # fnm node version manager
 eval "$(fnm env --use-on-cd)"
@@ -54,3 +56,4 @@ fi
 
 # rbenv
 eval "$(rbenv init - zsh)"
+eval "$(zellij setup --generate-auto-start zsh)"
