@@ -28,17 +28,6 @@ disabled = false
 added_style = "bold yellow"
 deleted_style = "bold red"
 
-# [git_status]
-# style = "bright-white"
-# format = "$all_status$ahead_behind"
-# conflicted = "  "
-# deleted = " 﫧"
-# modified = "  ×${count} "
-# stashed = "  ×${count} "
-# staged = "  ×${count} "
-# renamed = "  ×${count} "
-# untracked = "  ×${count} "
-
 [package]
 format = "version [$version](bold green) "
 symbol = " "
