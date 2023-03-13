@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+sketchybar -m --add item yabai_spaces left \
+  --set yabai_spaces drawing=off \
+  updates=on \
+  script="$PLUGIN_DIR/yabai_spaces.sh" \
+  --subscribe yabai_spaces space_change window_created window_destroyed \
+  \
+  --add item space_template left \
+  --set space_template icon.highlight_color=0xff9dd274 \
+  label.font="$FONT:Bold:17" \
+  drawing=off \
+  lazy=off
+
+# spotify
+. "$PLUGIN_DIR/spotify.sh"
+
+sketchybar --add item song left \
+  --set song script="$PLUGIN_DIR/spotify.sh" update_freq=5
