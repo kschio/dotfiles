@@ -10,17 +10,10 @@
 ctrl + alt - n : yabai -m window --space next; yabai -m space --focus next
 ctrl + alt - p : yabai -m window --space prev; yabai -m space --focus prev
 
-cmd + ctrl + alt - 1 : yabai -m window --space social; yabai -m space --focus social;
-cmd + ctrl + alt - 2 : yabai -m window --space browser; yabai -m space --focus browser;
-cmd + ctrl + alt - 3 : yabai -m window --space coding; yabai -m space --focus coding;
-cmd + ctrl + alt - 4 : yabai -m window --space design; yabai -m space --focus design;
-
-# Focus space
-ctrl + alt - 1 : yabai -m space --focus social
-ctrl + alt - 2 : yabai -m space --focus browser
-ctrl + alt - 3 : yabai -m space --focus coding
-ctrl + alt - 4 : yabai -m space --focus design
-ctrl + alt - 5 : yabai -m space --focus misc
+ctrl + alt - 1 : yabai -m window --space social; yabai -m space --focus social;
+ctrl + alt - 2 : yabai -m window --space browser; yabai -m space --focus browser;
+ctrl + alt - 3 : yabai -m window --space coding; yabai -m space --focus coding;
+ctrl + alt - 4 : yabai -m window --space design; yabai -m space --focus design;
 
 # Focus window
 ctrl + alt - h : yabai -m window --focus west  || yabai -m display --focus west
