@@ -1,6 +1,6 @@
-\command -v sheldon &> /dev/null || \
-    (curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
-    | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin)
+\command -v sheldon &>/dev/null ||
+  (curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh |
+    bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin)
 
 autoload -Uz compinit
 compinit -i
@@ -37,19 +37,11 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
-# fnm node version manager
-eval "$(fnm env --use-on-cd)"
-
 # zoxide
 eval "$(zoxide init zsh)"
 
 # auto title
 DISABLE_AUTO_TITLE="true"
-
-# local configuration
-if [[ -f "$HOME/.zshlocal" ]]; then
-  source "$HOME/.zshlocal"
-fi
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -57,3 +49,15 @@ fi
 # rbenv
 eval "$(rbenv init - zsh)"
 eval "$(zellij setup --generate-auto-start zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/ksch/Library/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# local configuration
+if [[ -f "$HOME/.zshlocal" ]]; then
+  source "$HOME/.zshlocal"
+fi
