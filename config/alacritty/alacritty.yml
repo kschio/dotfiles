@@ -1,82 +1,74 @@
+colors:
+  bright:
+    black: '#605a52'
+    blue: '#7382a0'
+    cyan: '#588C7C'
+    green: '#81895d'
+    magenta: '#9c739c'
+    red: '#ff1414'
+    white: '#e4ddd2'
+    yellow: '#f2a60d'
+  cursor:
+    cursor: '#605a52'
+    text: '#f7f3ee'
+  normal:
+    black: '#605a52'
+    blue: '#7382a0'
+    cyan: '#588C7C'
+    green: '#81895d'
+    magenta: '#9c739c'
+    red: '#ff1414'
+    white: '#e4ddd2'
+    yellow: '#f2a60d'
+  primary:
+    background: '#f7f3ee'
+    foreground: '#605a52'
+  selection:
+    background: '0x6a4cff'
+    text: '0xe4ddd2'
+cursor:
+  blink_interval: 750
+  style:
+    blinking: Always
+    shape: Beam
+  thickness: 0.3
+  unfocused_hollow: false
+  vi_mode_style:
+    shape: Beam
+draw_bold_text_with_bright_colors: true
 env:
   TERM: xterm-256color
-
-window:
-  decorations: Buttonless
-  opacity: 0.85
-  padding:
-    x: 30
-    y: 30
-
-scrolling:
-  history: 100000
-  multiplier: 6
-
 font:
-  size: 14.5
-  normal:
-    family: Liga SFMono Nerd Font
-    style: Regular
   bold:
     family: Liga SFMono Nerd Font
     style: Regular
-  italic:
-    family: Liga SFMono Nerd Font
-    style: Italic
   bold_italic:
     family: Liga SFMono Nerd Font
     style: Regular Italic
   builtin_box_drawing: true
+  italic:
+    family: Liga SFMono Nerd Font
+    style: Italic
+  normal:
+    family: Liga SFMono Nerd Font
+    style: Regular
   offset:
     x: 0
     y: 0
-
-draw_bold_text_with_bright_colors: true
-
-selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-  save_to_clipboard: true
-
-cursor:
-  style:
-    shape: Beam
-    blinking: Always
-  unfocused_hollow: false
-  thickness: 0.3
-  blink_interval: 750
-  vi_mode_style:
-    shape: Beam
-
-shell:
-  program: /bin/zsh
-
-colors:
-  # Default colors
-  primary:
-    background: "#161616"
-    foreground: "0xa9b1d6"
-
-  # Normal colors
-  normal:
-    black: "0x32344a"
-    red: "0xf7768e"
-    green: "0x9ece6a"
-    yellow: "0xe0af68"
-    blue: "0x7aa2f7"
-    magenta: "0xad8ee6"
-    cyan: "0x449dab"
-    white: "0x787c99"
-
-  # Bright colors
-  bright:
-    black: "0x444b6a"
-    red: "0xff7a93"
-    green: "0xb9f27c"
-    yellow: "0xff9e64"
-    blue: "0x7da6ff"
-    magenta: "0xbb9af7"
-    cyan: "0x0db9d7"
-    white: "0xacb0d0"
-
+  size: 14.5
 mouse:
   hide_when_typing: false
+scrolling:
+  history: 100000
+  multiplier: 6
+selection:
+  save_to_clipboard: true
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+shell:
+  program: /bin/zsh
+window:
+  decorations: Buttonless
+  opacity: 1.0
+  padding:
+    x: 16
+    y: 16
