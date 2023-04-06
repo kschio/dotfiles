@@ -1,0 +1,63 @@
+[[language]]
+name = "markdown"
+scope = "source.md"
+injection-regex = "md|markdown"
+file-types = ["md", "markdown", "PULLREQ_EDITMSG"]
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+language-server = { command = "marksman", args=["server"] }
+
+[[language]]
+name = "bash"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "sh"] }
+
+[[language]]
+name = "yaml"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+
+[[language]]
+name = "html"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+
+[[language]]
+name = "xml"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "xml"] }
+
+[[language]]
+name = "javascript"
+config = { enable = true, lint = true, unstable = true }
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+
+[[language]]
+name = "typescript"
+config = { enable = true, lint = true, unstable = true }
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+
+[[language]]
+name = "tsx"
+config = { enable = true, lint = true, unstable = true }
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+
+[[language]]
+name = "jsx"
+config = { enable = true, lint = true, unstable = true }
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+
+[[language]]
+name = "hcl"
+scope = "source.hcl"
+injection-regex = "(hcl|tf)"
+file-types = ["hcl", "tf", "tfvars"]
+roots = []
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-server = { command = "terraform-ls", args = ["serve"] }
+auto-format = true
