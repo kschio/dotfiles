@@ -1,10 +1,8 @@
 @tailwindcss/language-server
-corepack
 eslint_d
 fast-cli
 fixjson
 fkill-cli
-gtop
 nodemon
 npm
 npm-check-updates
@@ -13,4 +11,3 @@ prettierd
 svgo
 typescript-language-server
 uglify-js
-yarn
