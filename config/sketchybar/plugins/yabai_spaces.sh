@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+source "$HOME/.config/sketchybar/icons.sh"
+source "$HOME/.config/sketchybar/colors.sh"
 
-STATIC_NAMES=("" 聆    ﴯ)
+STATIC_NAMES=("" $ICON_COM $ICON_BROWSER $ICON_CODING $ICON_DESIGN $ICON_MISC)
 args=()
 QUERY="$(yabai -m query --spaces | jq -r '.[] | [.index, ."windows[0]", .label, .display, ."is-visible"] | @sh')"
 NAMES=""
@@ -22,7 +24,7 @@ while read -r index windows yabai_name display is_visible; do
   NAMES="$NAMES $NAME"
   args+=(--clone "$NAME" space_template after
     --set "$NAME" label="${label}"
-    label.highlight_color="0xff78c4d4"
+    label.highlight_color="$MAGENTA"
     associated_display=${display}
     label.highlight=${is_visible}
     drawing=on)

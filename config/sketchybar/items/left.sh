@@ -6,8 +6,7 @@ sketchybar -m --add item yabai_spaces left \
   --subscribe yabai_spaces space_change window_created window_destroyed \
   \
   --add item space_template left \
-  --set space_template icon.highlight_color=0xff9dd274 \
-  label.font="$FONT:Bold:17" \
+  --set space_template label.font="$FONT:Bold:17" \
   drawing=off \
   lazy=off
 
