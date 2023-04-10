@@ -7,6 +7,8 @@ cursorline = true
 line-number = "absolute"
 mouse = true
 true-color = true
+completion-trigger-len = 1
+auto-completion = true
 
 [editor.indent-guides]
 render = false
@@ -17,15 +19,23 @@ normal = "block"
 select = "underline"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "total-line-numbers"]
-center = []
-right = ["diagnostics", "file-encoding", "file-line-ending", "file-type", "position-percentage", "position"]
+left = ["mode", "separator", "file-name", "spinner"]
+center = ["version-control"]
+right = [
+  "diagnostics",
+  "separator",
+  "selections",
+  "separator",
+  "file-type",
+  "separator",
+  "position",
+]
 separator = "│"
 
 [editor.statusline.mode]
-normal = "NORMAL"
-insert = "INSERT"
-select = "SELECT"
+normal = "N"
+insert = "I"
+select = "S"
 
 [editor.file-picker]
 hidden = false
@@ -44,22 +54,21 @@ display-inlay-hints = true
 "esc" = ["collapse_selection", "keep_primary_selection"]
 "C-d" = ["half_page_down", "align_view_center"]
 "X" = "extend_line_above"
+"tab" = ":bn"
+"S-tab" = ":bp"
 
+[keys.normal.backspace]
+f = ":fmt"
 
 [keys.normal.space]
 space = "file_picker"
+n = ":new"
 w = ":w"
 q = ":q"
+x = ":buffer-close"
 
 [keys.normal.space.c]
 r = ":config-reload"
 o = ":config-open"
 w = ":set whitespace.render all"
 W = ":set whitespace.render none"
-
-[keys.insert]
-C-l = "normal_mode"
-C-r = "redo"
-C-s = [ "normal_mode", ":w" ]
-C-u = "undo"
-C-z = "undo"
