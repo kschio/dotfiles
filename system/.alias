@@ -1,15 +1,15 @@
-# Shortcuts
+# shortcuts
 alias reload="source ~/.zshrc"
 alias _="sudo"
 alias g="git"
 alias rr="rm -rf"
 
-# Default options
+# default options
 alias json="json -c"
 alias psgrep="psgrep -i"
 alias rsync="rsync -vh"
 
-# Global aliases
+# global aliases
 if $(is-supported "alias -g"); then
   alias -g G="| grep -i"
   alias -g H="| head"
@@ -17,12 +17,12 @@ if $(is-supported "alias -g"); then
   alias -g L="| less"
 fi
 
-# List declared aliases, functions, paths
+# list declared aliases, functions, paths
 alias aliases="alias | sed 's/=.*//'"
 alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
 alias paths='echo -e ${PATH//:/\\n}'
 
-# Directory listing/traversal
+# directory listing/traversal
 alias ls="exa --group-directories-first"
 alias ll="exa -l -g -a --icons --git --group-directories-first"
 alias tree="exa -T --icons --git"
@@ -34,14 +34,14 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias -- -="cd -"               # Go to previous dir with -
-alias cd.='cd $(readlink -f .)' # Go to real dir (i.e. if current dir is linked)
+alias -- -="cd -"
+alias cd.='cd $(readlink -f .)'
 
-# Network
+# network
 alias ip="curl -s ipinfo.io | jq -r '.ip'"
 alias ipl="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
 
-# Miscellaneous
+# miscellaneous
 alias hosts="sudo $EDITOR /etc/hosts"
 alias week="date +%V"
 alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
