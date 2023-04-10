@@ -1,11 +1,7 @@
 [[language]]
 name = "markdown"
-scope = "source.md"
-injection-regex = "md|markdown"
-file-types = ["md", "markdown", "PULLREQ_EDITMSG"]
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-language-server = { command = "marksman", args=["server"] }
+auto-format = true
 
 [[language]]
 name = "bash"
@@ -60,4 +56,15 @@ roots = []
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 language-server = { command = "terraform-ls", args = ["serve"] }
+auto-format = true
+
+[[language]]
+name = "rust"
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+
+[[language]]
+name = "toml"
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
