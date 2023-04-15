@@ -1,4 +1,4 @@
-![github banner (2)](https://user-images.githubusercontent.com/1451664/180439519-7ef26878-0163-43f4-884a-39406dc43ac1.svg)
+<img alt="dotfiles-banner" src="https://user-images.githubusercontent.com/1451664/232234046-0aaf44d3-bfa9-4812-b4d0-043e99542885.png">
 
 <p style="text-align: center;">Feel free to use at your own risk.</p>
 
