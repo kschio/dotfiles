@@ -5,47 +5,46 @@ auto-format = true
 
 [[language]]
 name = "bash"
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "sh"] }
+auto-format = true
 
 [[language]]
 name = "yaml"
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+auto-format = true
 
 [[language]]
 name = "html"
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 
 [[language]]
 name = "xml"
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "xml"] }
+auto-format = true
 
 [[language]]
 name = "javascript"
 config = { enable = true, lint = true, unstable = true }
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
 
 [[language]]
 name = "typescript"
 config = { enable = true, lint = true, unstable = true }
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
 
 [[language]]
 name = "tsx"
-config = { enable = true, lint = true, unstable = true }
-auto-format = true
+# config = { enable = true, lint = true, unstable = true }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
 
 [[language]]
 name = "jsx"
 config = { enable = true, lint = true, unstable = true }
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
 
 [[language]]
 name = "hcl"

@@ -1,14 +1,14 @@
 theme = "flatwhite"
 
 [editor]
-bufferline = "multiple"
 color-modes = true
 cursorline = true
-line-number = "absolute"
 mouse = true
 true-color = true
-completion-trigger-len = 1
 auto-completion = true
+line-number = "absolute"
+bufferline = "multiple"
+completion-trigger-len = 1
 
 [editor.indent-guides]
 render = false
