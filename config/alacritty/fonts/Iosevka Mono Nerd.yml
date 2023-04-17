@@ -6,10 +6,10 @@ font:
     family: Iosevka Nerd Font Mono
     style: Bold
   italic:
-    family: Iosevka NF
+    family: Iosevka Nerd Font Mono
     style: Italic
   bold_italic:
-    family: Iosevka NF
+    family: Iosevka Nerd Font Mono
     style: Bold Italic
   size: 14
   glyph_offset:
