@@ -10,7 +10,7 @@ auto-format = true
 
 [[language]]
 name = "yaml"
-formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
 auto-format = true
 
 [[language]]
@@ -24,37 +24,22 @@ auto-format = true
 
 [[language]]
 name = "javascript"
-config = { enable = true, lint = true, unstable = true }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "typescript"
-config = { enable = true, lint = true, unstable = true }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-# config = { enable = true, lint = true, unstable = true }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-config = { enable = true, lint = true, unstable = true }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "hcl"
-scope = "source.hcl"
-injection-regex = "(hcl|tf)"
-file-types = ["hcl", "tf", "tfvars"]
-roots = []
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-server = { command = "terraform-ls", args = ["serve"] }
 auto-format = true
 
 [[language]]
