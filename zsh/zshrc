@@ -5,6 +5,9 @@
 autoload -Uz compinit
 compinit -i
 
+# editor
+export EDITOR=hx
+
 # sheldon
 eval "$(sheldon source)"
 
@@ -22,6 +25,9 @@ export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 
 # open jdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# llvm
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
