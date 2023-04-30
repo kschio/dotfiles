@@ -24,7 +24,7 @@ while read -r index windows yabai_name display is_visible; do
   NAMES="$NAMES $NAME"
   args+=(--clone "$NAME" space_template after
     --set "$NAME" label="${label}"
-    label.highlight_color="$MAGENTA"
+    label.highlight_color="$YELLOW"
     associated_display=${display}
     label.highlight=${is_visible}
     drawing=on)

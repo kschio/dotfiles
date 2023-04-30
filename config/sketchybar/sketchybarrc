@@ -10,15 +10,15 @@ sketchybar -m --bar height=26 \
   position=top \
   padding_left=5 \
   padding_right=5 \
-  color=$BAR_COLOR \
+  color=$TRANSPARENT \
   \
   --default updates=when_shown \
   drawing=on \
   cache_scripts=on \
   icon.font="$FONT:Bold:17.0" \
-  icon.color=$ICON_COLOR \
+  icon.color=$WHITE \
   label.font="$FONT:Bold:13.0" \
-  label.color=$ICON_COLOR \
+  label.color=$BLACK \
   \
   --default label.padding_left=2 \
   label.padding_right=2 \

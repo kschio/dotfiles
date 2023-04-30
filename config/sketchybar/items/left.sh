@@ -9,9 +9,3 @@ sketchybar -m --add item yabai_spaces left \
   --set space_template label.font="$FONT:Bold:17" \
   drawing=off \
   lazy=off
-
-# spotify
-. "$PLUGIN_DIR/spotify.sh"
-
-sketchybar --add item song left \
-  --set song script="$PLUGIN_DIR/spotify.sh" update_freq=5
