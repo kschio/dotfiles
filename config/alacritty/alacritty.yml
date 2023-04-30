@@ -2,30 +2,30 @@ colors:
   bright:
     black: '#605a52'
     blue: '#7382a0'
-    cyan: '#588C7C'
-    green: '#81895d'
-    magenta: '#9c739c'
-    red: '#ff1414'
-    white: '#e4ddd2'
-    yellow: '#f2a60d'
+    cyan: '#7ecbc8'
+    green: '#afcb85'
+    magenta: '#a390f0'
+    red: '#cc7c8a'
+    white: '#d6d6dd'
+    yellow: '#ebc88d'
   cursor:
-    cursor: '#605a52'
+    cursor: '#535353'
     text: '#f7f3ee'
   normal:
     black: '#605a52'
     blue: '#7382a0'
-    cyan: '#588C7C'
-    green: '#81895d'
-    magenta: '#9c739c'
-    red: '#ff1414'
-    white: '#e4ddd2'
-    yellow: '#f2a60d'
+    cyan: '#7ecbc8'
+    green: '#afcb85'
+    magenta: '#a390f0'
+    red: '#cc7c8a'
+    white: '#d6d6dd'
+    yellow: '#ebc88d'
   primary:
-    background: '#f7f3ee'
-    foreground: '#605a52'
+    background: '#181818'
+    foreground: '#d6d6dd'
   selection:
-    background: '0x6a4cff'
-    text: '0xe4ddd2'
+    background: '#1f3661'
+    text: '#d6d6dd'
 cursor:
   blink_interval: 750
   style:
@@ -67,7 +67,7 @@ selection:
 shell:
   program: /bin/zsh
 window:
-  decorations: Buttonless
+  decorations: buttonless
   opacity: 1.0
   padding:
     x: 16
