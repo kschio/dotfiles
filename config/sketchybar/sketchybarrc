@@ -3,7 +3,7 @@ source "$HOME/.config/sketchybar/colors.sh"
 
 ITEM_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
-FONT="Hack Nerd Font"
+FONT="Liga SFMono Nerd Font"
 
 sketchybar -m --bar height=26 \
   blur_radius=50 \
