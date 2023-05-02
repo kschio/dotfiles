@@ -1,48 +1,4 @@
 [[language]]
-name = "markdown"
-formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-auto-format = true
-
-[[language]]
-name = "bash"
-formatter = { command = 'prettier', args = ["--parser", "sh"] }
-auto-format = true
-
-[[language]]
-name = "yaml"
-formatter = { command = "prettier", args = ["--parser", "yaml"] }
-auto-format = true
-
-[[language]]
-name = "html"
-formatter = { command = 'prettier', args = ["--parser", "html"] }
-
-[[language]]
-name = "xml"
-formatter = { command = 'prettier', args = ["--parser", "xml"] }
-auto-format = true
-
-[[language]]
-name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "typescript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "tsx"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
-name = "jsx"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
-
-[[language]]
 name = "rust"
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
@@ -52,3 +8,123 @@ name = "toml"
 indent = { tab-width = 2, unit = "  " }
 formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
+
+[[language]]
+name = "markdown"
+auto-format = true
+language-servers = ["marksman"]
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+[[language]]
+name = "css"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "vscode-css-language-server" },
+]
+formatter = { command = "prettier", args = ["--parser", "css"] }
+
+[[language]]
+name = "scss"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "vscode-css-language-server" },
+]
+formatter = { command = "prettier", args = ["--parser", "scss"] }
+
+[[language]]
+name = "html"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "vscode-html-language-server" },
+]
+formatter = { command = "prettier", args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "yaml"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "yaml-language-server" },
+]
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "typescript-language-server" },
+  { name = "eslint" },
+]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "typescript-language-server" },
+  { name = "eslint" },
+]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "typescript-language-server" },
+  { name = "eslint" },
+]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "typescript-language-server" },
+  { name = "eslint" },
+]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[language-server.typescript-language-server]
+args = ["--stdio"]
+command = "typescript-language-server"
+
+[language-server.typescript-language-server.config]
+documentFormatting = false
+
+[language-server.eslint]
+args = ["--stdio"]
+command = "vscode-eslint-language-server"
+
+[language-server.eslint.config]
+nodePath = ""
+workingDirectory = "location"
+format = true
+onIgnoredFiles = "off"
+quiet = false
+run = "onType"
+validate = "on"
+
+[language-server.eslint.config.codeAction]
+[language-server.eslint.config.codeAction.disableRuleComment]
+enable = true
+location = "separateLine"
+
+[language-server.eslint.config.codeAction.showDocumentation]
+enable = true
+
+[language-server.eslint.config.codeActionOnSave]
+enable = true
+mode = "all"
