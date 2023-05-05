@@ -1,31 +1,31 @@
 colors:
   bright:
-    black: '#605a52'
-    blue: '#7382a0'
-    cyan: '#7ecbc8'
-    green: '#afcb85'
-    magenta: '#a390f0'
-    red: '#cc7c8a'
-    white: '#d6d6dd'
-    yellow: '#ebc88d'
+    black: "#605a52"
+    blue: "#7382a0"
+    cyan: "#7ecbc8"
+    green: "#afcb85"
+    magenta: "#a390f0"
+    red: "#cc7c8a"
+    white: "#d6d6dd"
+    yellow: "#ebc88d"
   cursor:
-    cursor: '#535353'
-    text: '#f7f3ee'
+    cursor: "#535353"
+    text: "#f7f3ee"
   normal:
-    black: '#605a52'
-    blue: '#7382a0'
-    cyan: '#7ecbc8'
-    green: '#afcb85'
-    magenta: '#a390f0'
-    red: '#cc7c8a'
-    white: '#d6d6dd'
-    yellow: '#ebc88d'
+    black: "#605a52"
+    blue: "#7382a0"
+    cyan: "#7ecbc8"
+    green: "#afcb85"
+    magenta: "#a390f0"
+    red: "#cc7c8a"
+    white: "#d6d6dd"
+    yellow: "#ebc88d"
   primary:
-    background: '#181818'
-    foreground: '#d6d6dd'
+    background: "#181818"
+    foreground: "#d6d6dd"
   selection:
-    background: '#1f3661'
-    text: '#d6d6dd'
+    background: "#1f3661"
+    text: "#d6d6dd"
 cursor:
   blink_interval: 750
   style:
@@ -40,22 +40,32 @@ env:
   TERM: xterm-256color
 font:
   bold:
-    family: Liga SFMono Nerd Font
+    family: MonoLisa Nerd Font
     style: Regular
   bold_italic:
-    family: Liga SFMono Nerd Font
-    style: Regular Italic
-  builtin_box_drawing: true
+    family: MonoLisa Nerd Font
+    style: Bold Italic
   italic:
-    family: Liga SFMono Nerd Font
+    family: MonoLisa Nerd Font
     style: Italic
   normal:
-    family: Liga SFMono Nerd Font
+    family: MonoLisa Nerd Font
     style: Regular
-  offset:
-    x: 0
-    y: 0
-  size: 14.5
+  size: 14
+hints:
+  alphabet: jfkdls;ahgurieowpq
+  enabled:
+    - command: open
+      hyperlinks: true
+      mouse:
+        enabled: true
+        mods: None
+      post_processing: true
+      regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\0-\x1F\x7F-\x9F<>\"\\s{-}\\^⟨⟩`]+"
+key_bindings:
+  - action: ToggleSimpleFullscreen
+    key: F2
+live_config_reload: true
 mouse:
   hide_when_typing: false
 scrolling:
@@ -69,6 +79,7 @@ shell:
 window:
   decorations: buttonless
   opacity: 1.0
+  option_as_alt: OnlyLeft
   padding:
     x: 16
     y: 16
