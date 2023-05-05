@@ -110,20 +110,12 @@ command = "vscode-eslint-language-server"
 
 [language-server.eslint.config]
 nodePath = ""
-workingDirectory = "location"
-format = true
-onIgnoredFiles = "off"
-quiet = false
-run = "onType"
 validate = "on"
-
-[language-server.eslint.config.codeAction]
-[language-server.eslint.config.codeAction.disableRuleComment]
-enable = true
-location = "separateLine"
-
-[language-server.eslint.config.codeAction.showDocumentation]
-enable = true
+run = "onType"
+rulesCustomizations = []
+experimental = { useFlatConfig = false }
+problems = { shortenToSingleLine = false }
+format = true
 
 [language-server.eslint.config.codeActionOnSave]
 enable = true
