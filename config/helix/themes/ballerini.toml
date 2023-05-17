@@ -1,0 +1,129 @@
+# Syntax highlighting
+# -------------------
+"type" = "pastel-yellow"
+
+"constructor" = "pastel-blue"
+
+"constant" = "pastel-green"
+"constant.builtin" = "pastel-blue"
+"constant.character" = "cyan"
+"constant.character.escape" = "pastel-pink"
+
+"string" = "pastel-yellow"
+"string.regexp" = "pastel-pink"
+"string.special" = "pastel-blue"
+
+"comment" = { fg = "comment", modifiers = ["italic"] }
+
+"variable" = "pastel-yellow"
+"variable.parameter" = { fg = "red-orange", modifiers = ["italic"] }
+"variable.builtin" = "pastel-blue"
+"variable.other.member" = "cyan"
+
+"label" = "pastel-blue" # used for lifetimes
+
+"punctuation" = "foreground"
+"punctuation.special" = "light-red"
+
+"keyword" = { fg = "pastel-blue", modifiers = ["italic"] }
+
+"operator" = "light-red"
+
+"function" = "blue"
+"function.macro" = "cyan"
+
+"tag" = "light-red"
+"attribute" = "pastel-blue"
+
+"namespace" = { fg = "light-red", modifiers = ["italic"] }
+
+"special" = "cyan" # fuzzy highlight
+
+"markup.heading.marker" = { fg = "pink-red", modifiers = ["bold"] }
+"markup.heading.1" = "pink-red"
+"markup.heading.2" = "pink-red"
+"markup.heading.3" = "green"
+"markup.heading.4" = "pastel-yellow"
+"markup.heading.5" = "pastel-pink"
+"markup.heading.6" = "cyan"
+"markup.list" = "pastel-blue"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "cyan", modifiers = ["italic", "underlined"] }
+"markup.link.text" = "cyan"
+"markup.raw" = "light-red"
+
+"diff.plus" = "green"
+"diff.minus" = "pink-red"
+"diff.delta" = "pastel-blue"
+
+# User Interface
+# --------------
+"ui.background" = { fg = "foreground", bg = "background" }
+
+"ui.linenr" = { fg = "selection" }
+"ui.linenr.selected" = { fg = "light-red" }
+
+"ui.statusline" = { fg = "light-red", bg = "dark-brown" }
+"ui.statusline.inactive" = { fg = "comment", bg = "dark-brown" }
+"ui.statusline.normal" = { fg = "light-red", bg = "dark-brown" }
+"ui.statusline.insert" = { fg = "dark-brown", bg = "red-orange" }
+"ui.statusline.select" = { fg = "light-red", bg = "selection" }
+
+"ui.popup" = { fg = "foreground", bg = "dark-brown" }
+"ui.window" = { fg = "dark-brown" }
+"ui.help" = { fg = "foreground", bg = "dark-brown" }
+
+"ui.bufferline" = { fg = "foreground", bg = "dark-brown" }
+"ui.bufferline.active" = { fg = "light-red", bg = "dark-bown", underline = { color = "light-red", style = "line" } }
+"ui.bufferline.background" = { bg = "dark-brown" }
+
+"ui.text" = "foreground"
+"ui.text.focus" = { fg = "light-red", bg = "selection", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "comment" }
+
+"ui.virtual" = "dark-brown"
+"ui.virtual.ruler" = { bg = "dark-brown" }
+"ui.virtual.indent-guide" = "dark-brown"
+"ui.virtual.inlay-hint" = { fg = "red-orange", bg = "dark-brown" }
+
+"ui.selection" = { bg = "selection" }
+
+"ui.cursor" = { fg = "foreground", bg = "red-orange" }
+"ui.cursor.primary" = { fg = "foreground", bg = "red-orange" }
+"ui.cursor.match" = { fg = "red-orange", modifiers = ["bold"] }
+
+"ui.cursorline.primary" = { bg = "current-line" }
+
+"ui.highlight" = { bg = "dark-brown", modifiers = ["bold"] }
+
+"ui.menu" = { fg = "foreground", bg = "dark-brown" }
+"ui.menu.selected" = { fg = "light-red", bg = "selection" }
+
+"diagnostic.error" = { underline = { color = "pink-red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "pastel-yellow", style = "curl" } }
+"diagnostic.info" = { underline = { color = "pastel-blue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "cyan", style = "curl" } }
+
+error = "pink-red"
+warning = "pastel-yellow"
+info = "pastel-blue"
+hint = "cyan"
+
+[palette]
+background = "#261c1e"
+current-line = "#3a2624"
+selection = "#583c38"
+foreground = "#fff2e7"
+foreground-alt = "#feeccb"
+comment = "#8e646b"
+pastel-blue = "#97d4d9"
+pastel-pink = "#feafbe"
+pastel-green = "#b3dFd3"
+pastel-yellow = "#efc764"
+red-orange = "#a45a49"
+light-red = "#e68e7b"
+pink-red = "#e94554"
+dark-brown = "#2F2325"
+green = "#67e480"
+cyan = "#55cdc4"
