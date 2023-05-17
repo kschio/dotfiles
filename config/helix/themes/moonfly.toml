@@ -1,0 +1,125 @@
+
+"attribute" = "turquoise"
+"keyword" = "violet"
+"keyword.control.conditional" = "violet"
+"keyword.control.repeat" = "violet"
+"keyword.control.import" = "cranberry"
+"keyword.control.return" = "violet"
+"keyword.control.exception" = "crimson"
+"keyword.operator" = "cranberry"
+"keyword.directive" = "cranberry"
+"keyword.function" = "violet"
+"keyword.storage" = "violet"
+"keyword.storage.type" = "violet"
+"keyword.storage.modifier" = "violet"
+"type" = "emerald"
+"type.builtin" = "lime"
+"operator" = "cranberry"
+"namespace" = "turquoise"
+"function" = { fg = "sky", modifiers = ["bold"] }
+"function.builtin" = { fg = "green", modifiers = ["bold"] }
+"function.method" = { fg = "sky", modifiers = ["bold"] }
+"function.macro" = { fg = "green", modifiers = ["bold"] }
+"function.special" = { fg = "cranberry", modifiers = ["bold"] }
+"tag" = "lime"
+"markup.heading" = "blue"
+"markup.heading.marker" = "orange"
+"markup.list" = "blue"
+"markup.bold" = { fg = "yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "violet", modifiers = ["italic"] }
+"markup.url.link" = { fg = "purple", modifiers = ["underlined"] }
+"markup.url.text" = "white"
+"markup.quote" = "khaki"
+"comment" = "grey246"
+"comment.block.documentation" = "khaki"
+"constant" = "blue"
+"constant.builtin.boolean" = "coral"
+"constant.character" = "purple"
+"constant.character.escape" = "cranberry"
+"constant.numeric" = "orange"
+"constructor" = "sky"
+# "variable" = "white"
+"variable.builtin" = "emerald"
+"variable.parameter" = "khaki"
+"variable.other.member" = "turquoise"
+"label" = "yellow"
+"punctuation" = "cranberry"
+"punctuation.delimiter" = "white"
+"punctuation.bracket" = "blue"
+"punctuation.special" = "cranberry"
+"string" = "khaki"
+"string.regexp" = "turquoise"
+"string.special" = "cranberry"
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "crimson"
+"diff.delta.moved" = "sky"
+
+"ui.background" = { bg = "black" }
+"ui.cursor" = { fg = "grey247", bg = "blue" }
+"ui.cursor.match" = { fg = "yellow" }
+"ui.linenr" = { fg = "grey247", bg = "black" }
+"ui.linenr.selected" = { bg = "grey234", fg = "blue" }
+"ui.statusline" = { bg = "grey236", fg = "white" }
+"ui.statusline.normal" = { bg = "blue", fg = "grey234" }
+"ui.statusline.inactive" = { bg = "grey236", fg = "grey247" }
+"ui.statusline.insert" = { bg = "emerald", fg = "grey234" }
+"ui.statusline.select" = { bg = "purple", fg = "grey234" }
+"ui.popup" = { fg = "grey246", bg = "grey237" }
+"ui.window" = { fg = "grey236", bg = "grey236" }
+"ui.help" = { fg = "grey247", bg = "grey237" }
+"ui.text" = { fg = "grey249" }
+"ui.text.focus" = { fg = "white", bg = "grey237" }
+"ui.text.info" = { fg = "white" }
+"ui.virtual.whitespace" = { fg = "grey237" }
+"ui.virtual.ruler" = { bg = "black" }
+"ui.menu" = { fg = "white", bg = "black" }
+"ui.menu.selected" = { bg = "blue", fg = "black" }
+"ui.selection" = { bg = "grey0" }
+"ui.cursorline" = { bg = "grey234" }
+"warning" = { fg = "orange" }
+"error" = { fg = "red", modifiers = ["bold"] }
+"info" = { fg = "sky", modifiers = ["bold"] }
+"hint" = { fg = "white", modifiers = ["italic"] }
+"diagnostic" = { fg = "red", modifiers = ["underlined"] }
+"diagnostic.error" = { fg = "red", modifiers = ["underlined"] }
+"diagnostic.warning" = { fg = "yellow", modifiers = ["underlined"] }
+"diagnostic.info" = { fg = "sky", modifiers = ["underlined"] }
+"diagnostic.hint" = { fg = "white", modifiers = ["underlined"] }
+
+[palette]
+black = '#080808'
+white = '#c6c6c6'
+# Variations of charcoal-grey
+grey0 = '#323437'
+grey254 = '#e4e4e4'
+grey249 = '#b2b2b2'
+grey247 = '#9e9e9e'
+grey246 = '#949494'
+grey244 = '#808080'
+grey241 = '#626262'
+grey238 = '#444444'
+grey237 = '#3a3a3a'
+grey236 = '#303030'
+grey235 = '#262626'
+grey234 = '#1c1c1c'
+grey233 = '#121212'
+# Core theme colors
+khaki = '#c2c292'
+yellow = '#e3c78a'
+orange = '#de935f'
+coral = '#f09479'
+lime = '#85dc85'
+green = '#8cc85f'
+emerald = '#36c692'
+blue = '#80a0ff'
+sky = '#74b2ff'
+turquoise = '#79dac8'
+purple = '#ae81ff'
+cranberry = '#e2637f'
+violet = '#d183e8'
+crimson = '#ff5189'
+red = '#ff5454'
+# Extra colors
+spring = '#00875f'
