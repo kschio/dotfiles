@@ -1,0 +1,18 @@
+colors:
+  primary:
+    background: "#181818"
+    foreground: "#a9b1d6"
+
+  normal:
+    black: "#202020"
+    red: "#c73c3f"
+    green: "#73c936"
+    yellow: "#ffdd33"
+    blue: "#84afd7"
+
+  bright:
+    black: "#363b54"
+    red: "#ff5370"
+    green: "#c3e88d"
+    yellow: "#ffcb6b"
+    blue: "#62d6e8"
