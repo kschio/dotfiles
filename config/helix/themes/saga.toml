@@ -68,21 +68,15 @@
 
 "ui.statusline" = { fg = "overlay1", bg = "surface0" }
 "ui.statusline.inactive" = { fg = "overlay1", bg = "Charcoal" }
-"ui.statusline.normal" = { fg = "surface0", bg = "lavender", modifiers = [
-  "bold",
-] }
-"ui.statusline.insert" = { fg = "surface0", bg = "Menthol", modifiers = [
-  "bold",
-] }
-"ui.statusline.select" = { fg = "surface0", bg = "CottonCandy", modifiers = [
-  "bold",
-] }
+"ui.statusline.normal" = { fg = "surface0", bg = "lavender", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "surface0", bg = "Menthol", modifiers = ["bold"]  }
+"ui.statusline.select" = { fg = "surface0", bg = "CottonCandy", modifiers = ["bold"]  }
 
 "ui.popup" = { fg = "text", bg = "surface0" }
 "ui.window" = { fg = "VampireBlack" }
 "ui.help" = { fg = "overlay2", bg = "surface0" }
 
-"ui.text" = "text"
+"ui.text" = "text" 
 "ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
 
 "ui.virtual" = "overlay0"
@@ -141,4 +135,4 @@ Charcoal = "#0f1214"
 VampireBlack = "#0A0D0F"
 
 cursorline = "#141719"
-secondary_cursor = "#181b1d"
+secondary_cursor = "#181b1d" 
