@@ -72,9 +72,9 @@ fi
 # pnpm
 export PNPM_HOME="/Users/ksch/Library/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# telemetry opt out
+# azure function telemetry opt out
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
