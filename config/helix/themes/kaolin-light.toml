@@ -1,0 +1,102 @@
+# Author : thlsrms <thlsrmsdev@gmail.com>
+
+# Original author: kaolin-dark by Ogden Webb: github.com/ogdenwebb/emacs-kaolin-themes
+# Kaolin Light Theme - Light variant of the original Kaolin Dark Theme
+
+"attribute" = "magenta4"
+"keyword" = { fg = "teal2" }
+"keyword.directive" = "azure4"
+"namespace" = "magenta4"
+"punctuation" = "gray1"
+"punctuation.delimiter" = "gray1"
+"operator" = "gray1"
+"special" = "ultramarine1"
+"variable.other.member" = { fg = "magenta4", modifiers = ["italic"] }
+"variable" = "ultramarine1"
+"variable.builtin" = "teal2"
+"variable.parameter" = "magenta4"
+"type" = "vermilion3"
+"type.builtin" = "azure4"
+"constructor" = { fg = "vermilion3" }
+"function" = { fg = "azure4" }
+"function.macro" = "magenta4"
+"function.builtin" = "ultramarine1"
+"tag" = { fg = "teal2", modifiers = ["italic"] }
+"comment" = { fg = "gray7", modifiers = ["italic"] }
+"constant" = { fg = "magenta4" }
+"constant.builtin" = { fg = "azure4" }
+"string" = "erin2"
+"constant.character.escape" = { fg = "teal2", modifiers = ["bold"] }
+"constant.numeric" = "azure4"
+"label" = "magenta4"
+"module" = "azure4"
+
+"diff.plus" = "teal2"
+"diff.delta" = "orange1"
+"diff.minus" = "red3"
+
+"warning" = "orange1"
+"error" = "red3"
+"info" = "azure1"
+"hint" = "cyan3"
+
+"diagnostic.error" = { underline = { style = "curl", color = "red3" } }
+"diagnostic.warning" = { underline = { style = "curl", color = "orange1" } }
+"diagnostic.info" = { underline = { style = "curl", color = "azure1" } }
+"diagnostic.hint" = { underline = { style = "curl", color = "cyan3" } }
+
+"ui.background" = { bg = "kaolin-light-bg1" }
+"ui.linenr" = { fg = "gray7" }
+"ui.linenr.selected" = { fg = "green2", modifiers = ["bold"] }
+"ui.cursorline" = { bg = "kaolin-light-bg2" }
+"ui.statusline" = { fg = "azure4", bg = "kaolin-light-bg2" }
+"ui.statusline.normal" = { fg = "teal2", bg = "kaolin-light-bg2", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "orange1", bg = "kaolin-light-bg2", modifiers = ["reversed", "bold"] }
+"ui.statusline.select" = { fg = "magenta4", bg = "kaolin-light-bg2", modifiers = ["reversed", "bold"] }
+"ui.statusline.inactive" = { fg = "gray7", bg = "kaolin-light-bg2" }
+"ui.popup" = { bg = "kaolin-light-bg2" }
+"ui.window" = { fg = "kaolin-light-bg2", bg = "kaolin-light-bg1"}
+"ui.help" = { bg = "kaolin-light-bg2", fg = "gray1" }
+"ui.text" = { fg = "gray1" }
+"ui.text.focus" = { fg = "green2", modifiers = ["bold"] }
+"ui.selection" = { bg = "azure9" }
+"ui.selection.primary" = { bg = "azure9" }
+"ui.cursor.primary" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "white4", bg = "gray7" }
+"ui.menu" = { fg = "gray1", bg = "kaolin-light-bg2" }
+"ui.menu.selected" = { fg = "green2", bg = "kaolin-light-bg3", modifiers = ["bold"] }
+"ui.virtual.whitespace" = "white4"
+"ui.virtual.ruler" = { bg = "kaolin-light-bg2" }
+"ui.virtual.inlay-hint" = "gray7"
+"ui.virtual.inlay-hint.parameter" = { fg = "gray7", modifiers = ["italic"] }
+"ui.virtual.inlay-hint.type" = { fg = "gray7", modifiers = ["italic"] }
+
+
+"markup.heading" = { fg = "ultramarine1", modifiers = ["bold"] }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "azure1", underline = { style = "line" } }
+"markup.link.text" = "azure1"
+"markup.raw" = "magenta4"
+
+[palette]
+# kaolin-light palette
+kaolin-light-bg1  = "#edeeeb"
+kaolin-light-bg2  = "#dfe1dc"
+kaolin-light-bg3  = "#d1d4cd"
+white4 = "#bebec4"
+gray1 = "#383e3f" # black
+gray7 = "#7c878a"
+azure1 = "#3b84cc" # blue
+azure4 = "#4c7a90"
+azure9 = "#d3e4f0"
+cyan3 = "#6facb3" # cyan
+teal2 = "#13665f" # green
+erin2 = "#39854c"
+green2 = "#18a318"
+red3 = "#e84c58" # red
+vermilion3 = "#e36b3f"
+orange1 = "#dbac66" # yellow
+magenta4 = "#845A84" # purple
+ultramarine1 = "#6d46e3"

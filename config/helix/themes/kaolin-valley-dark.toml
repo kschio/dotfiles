@@ -1,0 +1,103 @@
+# Author : thlsrms <thlsrmsdev@gmail.com>
+
+# Original author: kaolin-valley-dark by Ogden Webb: github.com/ogdenwebb/emacs-kaolin-themes
+# Kaolin Valley Dark Theme - Colorful Kaolin theme with brown background
+
+"attribute" = "magenta3"
+"keyword" = { fg = "teal3" }
+"keyword.directive" = "harlequin3"
+"namespace" = "crimson3"
+"punctuation" = "amber9"
+"punctuation.delimiter" = "amber9"
+"operator" = "teal3"
+"special" = "ultramarine3"
+"variable.other.member" = { fg = "crimson3", modifiers = ["italic"] }
+"variable" = "crimson3"
+"variable.builtin" = "teal3"
+"variable.parameter" = "crimson3"
+"type" = "amber3"
+"type.builtin" = "aquamarine3"
+"constructor" = { fg = "amber3" }
+"function" = { fg = "valley-dark-fn" }
+"function.macro" = "valley-dark-fn"
+"function.builtin" = "aquamarine3"
+"tag" = "harlequin3"
+"comment" = { fg = "valley-dark-comment", modifiers = ["italic"] }
+"constant" = { fg = "crimson3" }
+"constant.builtin" = { fg = "aquamarine3" }
+"string" = "magenta3"
+"constant.numeric" = "aquamarine3"
+"constant.character.escape" = "magenta3"
+"label" = "ultramarine3"
+"module" = "harlequin3"
+
+"diff.plus" = "harlequin3"
+"diff.delta" = "amber3"
+"diff.minus" = "red3"
+
+"warning" = "amber1"
+"error" = "red3"
+"info" = "capri3"
+"hint" = "cyan3"
+
+"diagnostic.error" = { underline = { style = "curl", color = "red3" } }
+"diagnostic.warning" = { underline = { style = "curl", color = "amber1" } }
+"diagnostic.info" = { underline = { style = "curl", color = "capri3" } }
+"diagnostic.hint" = { underline = { style = "curl", color = "cyan3" } }
+
+"ui.background" = { bg = "valley-dark-bg1" }
+"ui.linenr" = { fg = "valley-dark-comment" }
+"ui.linenr.selected" = { fg = "amber1", modifiers = ["bold"] }
+"ui.cursorline" = { bg = "valley-dark-bg2" }
+"ui.statusline" = { fg = "amber9", bg = "valley-dark-bg2" }
+"ui.statusline.normal" = { fg = "amber1", bg = "valley-dark-bg2", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "cyan3", bg = "valley-dark-bg2", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "crimson3", bg = "valley-dark-bg2", modifiers = ["bold"] }
+"ui.statusline.inactive" = { fg = "valley-dark-comment", bg = "valley-dark-bg2" }
+"ui.popup" = { bg = "valley-dark-bg2" }
+"ui.window" = { fg = "valley-dark-bg2", bg = "valley-dark-bg1" }
+"ui.help" = { bg = "valley-dark-bg2", fg = "amber9" }
+"ui.text" = { fg = "magenta3" }
+"ui.text.focus" = { fg = "vermilion3", bg = "valley-dark-bg2" }
+"ui.selection" = { bg = "red6" }
+"ui.selection.primary" = { bg = "red6" }
+"ui.cursor.primary" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "valley-dark-bg1", bg = "vermilion3" }
+"ui.menu" = { fg = "magenta3", bg = "valley-dark-bg2" }
+"ui.menu.selected" = { fg = "vermilion3", bg = "valley-dark-bg2", modifiers = ["bold"] }
+"ui.virtual.whitespace" = "brown2"
+"ui.virtual.ruler" = { bg = "valley-dark-bg4" }
+"ui.virtual.inlay-hint" = "valley-dark-comment"
+"ui.virtual.inlay-hint.parameter" = { fg = "valley-dark-comment", modifiers = ["italic"] }
+"ui.virtual.inlay-hint.type" = { fg = "valley-dark-comment", modifiers = ["italic"] }
+
+"markup.heading" = "amber3"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "crimson3", modifiers = ["underlined"] }
+"markup.link.text" = "valley-dark-fn"
+"markup.raw" = "vermilion3"
+
+[palette]
+# kaolin-valley-dark palette
+valley-dark-bg1 = "#262221"
+valley-dark-bg2 = "#2e2a29"
+valley-dark-bg4 = "#383030"
+valley-dark-fn = "#7ed7e6"
+valley-dark-comment = "#635c4a"
+brown2 = "#52413f"
+amber1 = "#cfb05f"
+amber3 = "#eed891"
+amber9 = "#eee6d3"
+red3 = "#e84c58"
+red6 = "#402e2e"
+vermilion3 = "#ee7042"
+crimson3 = "#ef6787"
+harlequin3 = "#91f368"
+capri3 = "#41b0f3"
+cyan3 = "#6bd9db"
+teal3 = "#49bdb0"
+aquamarine3 = "#53e6b5"
+ultramarine3 = "#9587dd"
+magenta3 = "#cea2ca"
