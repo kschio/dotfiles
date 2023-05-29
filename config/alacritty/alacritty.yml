@@ -1,31 +1,25 @@
 colors:
   bright:
-    black: "#605a52"
-    blue: "#7382a0"
-    cyan: "#7ecbc8"
-    green: "#afcb85"
-    magenta: "#a390f0"
-    red: "#cc7c8a"
-    white: "#d6d6dd"
-    yellow: "#ebc88d"
-  cursor:
-    cursor: "#535353"
-    text: "#f7f3ee"
+    black: '#879193'
+    blue: '#97B8DE'
+    cyan: '#5096AB'
+    green: '#72CCBA'
+    magenta: '#8C629C'
+    red: '#E36D5B'
+    white: '#EFEFF1'
+    yellow: '#F2C866'
   normal:
-    black: "#605a52"
-    blue: "#7382a0"
-    cyan: "#7ecbc8"
-    green: "#afcb85"
-    magenta: "#a390f0"
-    red: "#cc7c8a"
-    white: "#d6d6dd"
-    yellow: "#ebc88d"
+    black: '#4B5254'
+    blue: '#91B9C7'
+    cyan: '#4D9391'
+    green: '#6FB593'
+    magenta: '#845A84'
+    red: '#CD5C60'
+    white: '#E4E4E8'
+    yellow: '#DBAC66'
   primary:
-    background: "#181818"
-    foreground: "#d6d6dd"
-  selection:
-    background: "#1f3661"
-    text: "#d6d6dd"
+    background: '#18181B'
+    foreground: '#E4E4E8'
 cursor:
   blink_interval: 750
   style:
@@ -55,16 +49,16 @@ font:
 hints:
   alphabet: jfkdls;ahgurieowpq
   enabled:
-    - command: open
-      hyperlinks: true
-      mouse:
-        enabled: true
-        mods: None
-      post_processing: true
-      regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\0-\x1F\x7F-\x9F<>\"\\s{-}\\^⟨⟩`]+"
+  - command: open
+    hyperlinks: true
+    mouse:
+      enabled: true
+      mods: None
+    post_processing: true
+    regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\0-\x1F\x7F-\x9F<>\"\\s{-}\\^⟨⟩`]+"
 key_bindings:
-  - action: ToggleSimpleFullscreen
-    key: F2
+- action: ToggleSimpleFullscreen
+  key: F2
 live_config_reload: true
 mouse:
   hide_when_typing: false
@@ -78,7 +72,7 @@ shell:
   program: /bin/zsh
 window:
   decorations: buttonless
-  opacity: 1.0
+  opacity: 1
   option_as_alt: OnlyLeft
   padding:
     x: 16
