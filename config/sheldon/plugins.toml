@@ -3,9 +3,6 @@ shell = "zsh"
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
-[plugins.alias-tips]
-github = "djui/alias-tips"
-
 [plugins.oh-my-zsh]
 github = "ohmyzsh/ohmyzsh"
 use = [
@@ -15,7 +12,7 @@ use = [
     "lib/directories.zsh",
     "plugins/git/git.plugin.zsh",
     "plugins/colored-man-pages/colored-man-pages.plugin.zsh",
-    ]
+]
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
