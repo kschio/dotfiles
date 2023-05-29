@@ -10,10 +10,26 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
 
 [[language]]
+name = "toml"
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
+
+[[language]]
 name = "markdown"
 auto-format = true
 language-servers = ["marksman"]
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+[[language]]
+name = "json"
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "vscode-json-language-server" },
+]
+formatter = { command = "prettier", args = ["--parser", "json"] }
+auto-format = true
 
 [[language]]
 name = "css"
@@ -21,6 +37,7 @@ language-servers = [
   { except-features = [
     "format",
   ], name = "vscode-css-language-server" },
+  { name = "tailwindcss" },
 ]
 formatter = { command = "prettier", args = ["--parser", "css"] }
 
@@ -30,6 +47,7 @@ language-servers = [
   { except-features = [
     "format",
   ], name = "vscode-css-language-server" },
+  { name = "tailwindcss" },
 ]
 formatter = { command = "prettier", args = ["--parser", "scss"] }
 
@@ -39,6 +57,7 @@ language-servers = [
   { except-features = [
     "format",
   ], name = "vscode-html-language-server" },
+  { name = "tailwindcss" },
 ]
 formatter = { command = "prettier", args = ["--parser", "html"] }
 auto-format = true
@@ -59,6 +78,7 @@ language-servers = [
   { except-features = [
     "format",
   ], name = "typescript-language-server" },
+  { name = "tailwindcss" },
   { name = "eslint" },
 ]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
@@ -70,6 +90,7 @@ language-servers = [
   { except-features = [
     "format",
   ], name = "typescript-language-server" },
+  { name = "tailwindcss" },
   { name = "eslint" },
 ]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
@@ -81,6 +102,7 @@ language-servers = [
   { except-features = [
     "format",
   ], name = "typescript-language-server" },
+  { name = "tailwindcss" },
   { name = "eslint" },
 ]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
@@ -92,21 +114,26 @@ language-servers = [
   { except-features = [
     "format",
   ], name = "typescript-language-server" },
+  { name = "tailwindcss" },
   { name = "eslint" },
 ]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [language-server.typescript-language-server]
-args = ["--stdio"]
 command = "typescript-language-server"
+args = ["--stdio"]
 
 [language-server.typescript-language-server.config]
 documentFormatting = false
 
-[language-server.eslint]
+[language-server.tailwindcss]
+command = "tailwindcss-language-server"
 args = ["--stdio"]
+
+[language-server.eslint]
 command = "vscode-eslint-language-server"
+args = ["--stdio"]
 
 [language-server.eslint.config]
 nodePath = ""
