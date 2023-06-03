@@ -26,6 +26,9 @@ export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 # open jdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
+# cargo
+export PATH=$HOME/.cargo/bin:$PATH
+
 # llvm
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
