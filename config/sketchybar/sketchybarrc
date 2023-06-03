@@ -1,40 +1,52 @@
 #!/usr/bin/env bash
 source "$HOME/.config/sketchybar/colors.sh"
 
-ITEM_DIR="$HOME/.config/sketchybar/items"
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 FONT="Liga SFMono Nerd Font"
 
-sketchybar -m --bar height=26 \
-  blur_radius=50 \
-  position=top \
-  padding_left=5 \
-  padding_right=5 \
-  color=$TRANSPARENT \
-  \
-  --default updates=when_shown \
-  drawing=on \
-  cache_scripts=on \
-  icon.font="$FONT:Bold:17.0" \
-  icon.color=$WHITE \
-  label.font="$FONT:Bold:13.0" \
-  label.color=$BLACK \
-  \
-  --default label.padding_left=2 \
-  label.padding_right=2 \
-  icon.padding_left=8 \
-  label.padding_right=8 \
-  \
-  --add event window_focus \
+bar=(
+  color=$TRANSPARENT
+  shadow=off
+  position=top
+  sticky=on
+  height=26
+  blur_radius=50
+  padding_right=10
+  padding_left=10
+  y_offset=2
+)
+
+sketchybar --bar "${bar[@]}"
+
+defaults=(
+  updates=when_shown
+  drawing=on
+  cache_scripts=on
+  icon.font="$FONT:Bold:17.0"
+  icon.color=$BLACK
+  icon.padding_left=5
+  icon.padding_right=5
+  label.font="$FONT:Bold:11"
+  label.color=$BLACK
+  label.padding_left=3
+  label.padding_right=5
+  padding_right=3
+  padding_left=3
+  background.padding_right=10
+  background.height=20
+  background.corner_radius=2
+)
+
+sketchybar --default "${defaults[@]}"
+
+sketchybar -m --add event window_focus \
   --add event window_created \
   --add event window_destroyed \
   --add event layout_change \
   --add event property_change
 
-source "$ITEM_DIR/left.sh"
-source "$ITEM_DIR/right.sh"
-source "$ITEM_DIR/center.sh"
+source "$HOME/.config/sketchybar/items.sh"
 
 sketchybar -m --update
 
-echo "sketchybar configuration loaded.."
+echo "sketchybar configuration loaded..."
