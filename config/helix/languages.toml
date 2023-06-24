@@ -128,8 +128,11 @@ args = ["--stdio"]
 documentFormatting = false
 
 [language-server.tailwindcss]
-command = "tailwindcss-language-server"
+language-id = "typescriptreact"
+command = "hx-tw"
+config = {}
 args = ["--stdio"]
+timeout = 3
 
 [language-server.eslint]
 command = "vscode-eslint-language-server"
