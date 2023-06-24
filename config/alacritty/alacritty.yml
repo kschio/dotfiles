@@ -34,16 +34,16 @@ env:
   TERM: xterm-256color
 font:
   bold:
-    family: MonoLisa Nerd Font
+    family: BerkeleyMono Nerd Font
     style: Regular
   bold_italic:
-    family: MonoLisa Nerd Font
+    family: BerkeleyMono Nerd Font
     style: Bold Italic
   italic:
-    family: MonoLisa Nerd Font
+    family: BerkeleyMono Nerd Font
     style: Italic
   normal:
-    family: MonoLisa Nerd Font
+    family: BerkeleyMono Nerd Font
     style: Regular
   size: 14
 hints:
