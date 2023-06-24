@@ -50,12 +50,21 @@
 "ui.linenr.selected" = { fg = "gray9", modifiers = ["bold"] }
 "ui.cursorline" = { bg = "black2" }
 "ui.statusline" = { fg = "teal4", bg = "black2" }
-"ui.statusline.normal" = { fg = "teal1", bg = "black2", modifiers = ["reversed", "bold"] }
-"ui.statusline.insert" = { fg = "spring-green3", bg = "black2", modifiers = ["reversed", "bold"] }
-"ui.statusline.select" = { fg = "ultramarine4_dark", bg = "black2", modifiers = ["reversed", "bold"] }
+"ui.statusline.normal" = { fg = "teal1", bg = "black2", modifiers = [
+  "reversed",
+  "bold",
+] }
+"ui.statusline.insert" = { fg = "spring-green3", bg = "black2", modifiers = [
+  "reversed",
+  "bold",
+] }
+"ui.statusline.select" = { fg = "ultramarine4_dark", bg = "black2", modifiers = [
+  "reversed",
+  "bold",
+] }
 "ui.statusline.inactive" = { fg = "gray3", bg = "black2" }
 "ui.popup" = { bg = "black2" }
-"ui.window" = { fg= "black2", bg = "black1" }
+"ui.window" = { fg = "black2", bg = "black1" }
 "ui.help" = { bg = "black2", fg = "white1" }
 "ui.text" = { fg = "white4" }
 "ui.text.focus" = { fg = "aquamarine3" }
@@ -65,7 +74,7 @@
 "ui.cursor.match" = { fg = "black2", bg = "ultramarine4_dark" }
 "ui.menu" = { fg = "white1", bg = "black2" }
 "ui.menu.selected" = { fg = "aquamarine3", bg = "black4", modifiers = ["bold"] }
-"ui.virtual.whitespace" = "black4"
+"ui.virtual.whitespace" = "white4"
 "ui.virtual.ruler" = { bg = "black2" }
 "ui.virtual.inlay-hint" = "gray9"
 "ui.virtual.inlay-hint.parameter" = { fg = "gray9", modifiers = ["dim"] }
