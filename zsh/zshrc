@@ -60,6 +60,8 @@ DISABLE_AUTO_TITLE="true"
 
 # rbenv
 eval "$(rbenv init - zsh)"
+
+# zellij
 eval "$(zellij setup --generate-auto-start zsh)"
 
 # alias
