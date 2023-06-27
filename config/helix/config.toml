@@ -1,4 +1,4 @@
-theme = "kaolin-dark"
+theme = "ferra"
 
 [editor]
 color-modes = true
@@ -38,7 +38,7 @@ select = "S"
 hidden = false
 
 [editor.explorer]
-column-width = 30
+column-width = 40
 position = "right"
 
 [editor.whitespace.characters]
