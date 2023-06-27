@@ -1,4 +1,3 @@
-local ShiftItKeys = require "Util/ShiftItKeys"
 hyper = {"⌘", "⌥", "⌃"}
 mash = {"⌥", "⌃"}
 
@@ -17,9 +16,5 @@ for spoonName, enabled in pairs(spoons) do
 end
 
 hs.hotkey.bind(hyper, "end", function() hs.caffeinate.lockScreen(); end)
-
--- Spoons
-hs.loadSpoon("ShiftIt")
-spoon.ShiftIt:bindHotkeys(ShiftItKeys)
 
 hs.alert("Hammerspoon config loaded 🤘")

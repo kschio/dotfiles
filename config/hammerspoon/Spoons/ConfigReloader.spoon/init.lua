@@ -26,7 +26,6 @@ function obj:reloadConfig()
     hs.reload()
     print("")
     print("[*] Config reloaded")
-    -- hs.notify.new({title="Hammerspoon Config Reloaded"}):send()
 end
 
 function obj:start()
