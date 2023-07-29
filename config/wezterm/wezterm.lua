@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm';
 
 return {
-  color_scheme = "ferra",
+  color_scheme = "yo-berry",
   font = wezterm.font("MonoLisa Nerd Font", { weight="Medium", stretch="Normal", style="Normal" }),
   font_rules = {
     {
@@ -42,4 +42,5 @@ return {
   cursor_blink_rate = 500,
   front_end = 'WebGpu',
   max_fps = 120,
+  audible_bell = 'Disabled'
 }

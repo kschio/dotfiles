@@ -1,4 +1,14 @@
 [colors]
+background = '#2b292d'
+foreground = '#fecdb2'
+
+cursor_bg = '#fecdb2'
+cursor_fg = '#383539'
+cursor_border = '#fecdb2'
+
+selection_bg = '#4d424b'
+selection_fg = '#fecdb2'
+
 ansi = [
   '#1f1e20',
   '#c05862',
@@ -9,7 +19,6 @@ ansi = [
   '#bfbfcf',
   '#f5f5f5',
 ]
-background = '#2b292d'
 brights = [
   '#2b292d',
   '#e06b75',
@@ -20,15 +29,3 @@ brights = [
   '#d1d1e0',
   '#ffffff',
 ]
-cursor_bg = '#fecdb2'
-cursor_border = '#fecdb2'
-cursor_fg = '#383539'
-foreground = '#fecdb2'
-selection_bg = '#4d424b'
-selection_fg = '#fecdb2'
-
-[colors.indexed]
-
-[metadata]
-name = 'ferra'
-origin_url = 'https://github.com/casperstorm/ferra'
