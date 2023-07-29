@@ -43,8 +43,7 @@ ctrl + alt - x : yabai -m space --mirror x-axis
 ctrl + alt - y : yabai -m space --mirror y-axis
 
 # Float / Unfloat window
-ctrl + alt - o : yabai -m window --toggle float
-ctrl + alt + cmd - space : yabai -m window --toggle float && yabai -m window --grid 1:3:0:0:2:1
+ctrl + alt + cmd - space : yabai -m window --toggle float; yabai -m window --grid 10:10:1:0:8:10
 
 # Make window native fullscreen
 ctrl + alt - f  : yabai -m window --toggle native-fullscreen
