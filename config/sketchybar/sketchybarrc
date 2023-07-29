@@ -5,15 +5,15 @@ PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 FONT="Liga SFMono Nerd Font"
 
 bar=(
-  color=$TRANSPARENT
+  color=$BLACK
   shadow=off
   position=top
   sticky=on
-  height=26
+  height=27
   blur_radius=50
   padding_right=10
   padding_left=10
-  y_offset=2
+  y_offset=0
 )
 
 sketchybar --bar "${bar[@]}"
