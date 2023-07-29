@@ -3,6 +3,9 @@ alias reload="source ~/.zshrc"
 alias _="sudo"
 alias g="git"
 alias rr="rm -rf"
+alias nano="hx"
+alias vim="hx"
+alias nvim="hx"
 
 # default options
 alias json="json -c"
