@@ -1,14 +1,15 @@
-theme = "ferra"
+theme = "yo_berry_dark"
 
 [editor]
 color-modes = true
 cursorline = true
 mouse = true
 true-color = true
+auto-pairs = false
 auto-completion = true
 line-number = "absolute"
-bufferline = "multiple"
 completion-trigger-len = 1
+idle-timeout = 50
 
 [editor.indent-guides]
 render = false
@@ -28,6 +29,9 @@ right = [
   "position",
   "total-line-numbers",
 ]
+
+[editor.soft-wrap]
+enable = true
 
 [editor.statusline.mode]
 normal = "N"
