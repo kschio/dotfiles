@@ -13,7 +13,7 @@ CSGO-z6zhQ-MknXY-oS8vA-3b3hb-hYXTB
 ```
 CSGO-Gxxnc-Ytx2i-TCrGP-jGsjU-QkpJN
 ```
-![CSGO-Gxxnc-Ytx2i-TCrGP-jGsjU-QkpJN](https://github.com/kschio/dotfiles/assets/1451664/5c1cebf7-ff7f-4f1e-829a-d0f13ea811d3)
+![CSGO-Gxxnc-Ytx2i-TCrGP-jGsjU-QkpJN](https://github.com/kschio/dotfiles/assets/1451664/22c4041e-7ef5-43e3-8f55-fef712c7cc1a)
 
 ```
 CSGO-sptrT-Vc3VJ-kkSFw-88NOy-WAbYO
