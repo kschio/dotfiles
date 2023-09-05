@@ -2,7 +2,23 @@ layout {
     default_tab_template {
         children
         pane size=1 borderless=true {
-            plugin location="file:/Users/ksch/.config/zellij/plugins/bare-bar.wasm"
+            plugin location="file:/Users/ksch/.config/zellij/plugins/zjstatus.wasm" {
+                format_left  "{mode} {tabs} "
+                format_right "{datetime}"
+                format_space ""
+
+                hide_frame_for_single_pane "true"
+
+                mode_normal  "#[fg=#12a594] ⛩ "
+                mode_scroll  "#[fg=#938fe8] 👀 "
+
+                tab_normal   "#[fg=#6C7086] {name} "
+                tab_active   "#[fg=#875cad,bold] {name} "
+
+                datetime        "#[fg=#6C7086,bold] {format} "
+                datetime_format "%A, %d %b %Y %H:%M"
+                datetime_timezone "Europe/Berlin"
+            }
         }
     }
     tab name="DEV" focus=true {
