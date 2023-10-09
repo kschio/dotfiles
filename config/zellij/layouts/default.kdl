@@ -9,11 +9,11 @@ layout {
 
                 hide_frame_for_single_pane "true"
 
-                mode_normal  "#[fg=#12a594] ⛩ "
-                mode_scroll  "#[fg=#938fe8] 👀 "
+                mode_normal  "#[fg=#f15b46]  "
+                mode_scroll  "#[fg=#938fe8]  "
 
                 tab_normal   "#[fg=#6C7086] {name} "
-                tab_active   "#[fg=#875cad,bold] {name} "
+                tab_active   "#[fg=#f15b46,bold] {name} "
 
                 datetime        "#[fg=#6C7086,bold] {format} "
                 datetime_format "%A, %d %b %Y %H:%M"
