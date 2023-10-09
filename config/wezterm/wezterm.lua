@@ -1,21 +1,23 @@
 local wezterm = require 'wezterm';
 
+local FONT_NAME = "MonoLisa"
+
 return {
-  color_scheme = "yo-berry",
-  font = wezterm.font("MonoLisa Nerd Font", { weight="Medium", stretch="Normal", style="Normal" }),
+  color_scheme = "Tokyo Night Day",
+  font = wezterm.font(FONT_NAME, { weight="Medium", stretch="Normal", style="Normal" }),
   font_rules = {
     {
       italic = true,
-      font = wezterm.font("MonoLisa Nerd Font", { weight="Medium", stretch="Normal", style="Italic" }),
+      font = wezterm.font(FONT_NAME, { weight="Medium", stretch="Normal", style="Italic" }),
     },
     {
       intensity = "Bold",
-      font = wezterm.font("MonoLisa Nerd Font", { weight="Bold", stretch="Normal", style="Normal" }),
+      font = wezterm.font(FONT_NAME, { weight="Bold", stretch="Normal", style="Normal" }),
     },
     {
       intensity = "Bold",
       italic = true,
-      font = wezterm.font("MonoLisa Nerd Font", { weight="Bold", stretch="Normal", style="Italic" })
+      font = wezterm.font(FONT_NAME, { weight="Bold", stretch="Normal", style="Italic" })
     },
   },
   font_size = 14.0,
