@@ -5,14 +5,14 @@ PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
 FONT="Liga SFMono Nerd Font"
 
 bar=(
-  color=$BLACK
-  shadow=off
+  color=$GRAY
+  shadow=on
   position=top
   sticky=on
-  height=27
+  height=32
   blur_radius=50
-  padding_right=10
-  padding_left=10
+  padding_right=18
+  padding_left=18
   y_offset=0
 )
 
@@ -22,19 +22,19 @@ defaults=(
   updates=when_shown
   drawing=on
   cache_scripts=on
-  icon.font="$FONT:Bold:17.0"
+  icon.font="$FONT:Bold:16.0"
   icon.color=$BLACK
   icon.padding_left=5
   icon.padding_right=5
   label.font="$FONT:Bold:11"
   label.color=$BLACK
   label.padding_left=3
-  label.padding_right=5
-  padding_right=3
-  padding_left=3
+  label.padding_right=6
+  padding_right=0
+  padding_left=0
   background.padding_right=10
-  background.height=20
-  background.corner_radius=2
+  background.height=24
+  background.corner_radius=4
 )
 
 sketchybar --default "${defaults[@]}"
