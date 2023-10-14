@@ -92,3 +92,6 @@ esac
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+# nnn
+export NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;m:nmount;v:imgview;r:renamer;c:.cbcp;s:-!echo $PWD/$nnn|pbcopy*;h:-!hx $nnn*;t:-!~/.local/bin/helix-open "$PWD/$nnn"*;w:!~/.local/bin/nnn-cwd*;b:-!~/local/.bin/nnn-git-blame'
