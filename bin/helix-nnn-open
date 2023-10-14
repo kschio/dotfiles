@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+FILENAME=$1
+zellij action go-to-tab-name "EXP"
+# go to shell
+zellij action write-chars ';w'
+zellij action write-chars "${FILENAME}"
+zellij action write 13
