@@ -1,12 +1,10 @@
 [[language]]
-name = "rust"
-indent = { tab-width = 2, unit = "  " }
+name = "bash"
 auto-format = true
 
 [[language]]
-name = "toml"
+name = "rust"
 indent = { tab-width = 2, unit = "  " }
-formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
 
 [[language]]
@@ -23,102 +21,52 @@ formatter = { command = "prettier", args = ["--parser", "markdown"] }
 
 [[language]]
 name = "json"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "vscode-json-language-server" },
-]
+language-servers = ["vscode-json-language-server"]
 formatter = { command = "prettier", args = ["--parser", "json"] }
 auto-format = true
 
 [[language]]
 name = "css"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "vscode-css-language-server" },
-  { name = "tailwindcss" },
-]
+language-servers = ["vscode-css-language-server", "tailwindcss"]
 formatter = { command = "prettier", args = ["--parser", "css"] }
 
 [[language]]
-name = "scss"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "vscode-css-language-server" },
-  { name = "tailwindcss" },
-]
-formatter = { command = "prettier", args = ["--parser", "scss"] }
-
-[[language]]
 name = "html"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "vscode-html-language-server" },
-  { name = "tailwindcss" },
-]
 formatter = { command = "prettier", args = ["--parser", "html"] }
 auto-format = true
 
 [[language]]
 name = "yaml"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "yaml-language-server" },
-]
+language-servers = ["yaml-language-server"]
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "typescript-language-server" },
-  { name = "tailwindcss" },
-  { name = "eslint" },
-]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "typescript-language-server" },
-  { name = "tailwindcss" },
-  { name = "eslint" },
-]
+language-servers = ["tailwindcss", "typescript-language-server", "eslint"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "typescript"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "typescript-language-server" },
-  { name = "tailwindcss" },
-  { name = "eslint" },
-]
+language-servers = ["tailwindcss", "typescript-language-server", "eslint"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = [
-  { except-features = [
-    "format",
-  ], name = "typescript-language-server" },
-  { name = "tailwindcss" },
-  { name = "eslint" },
-]
+language-servers = ["tailwindcss", "typescript-language-server", "eslint"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
+
+[language-server.vscode-json]
+command = "vscode-json-language-server"
+args = ["--stdio"]
 
 [language-server.typescript-language-server]
 command = "typescript-language-server"
@@ -128,11 +76,8 @@ args = ["--stdio"]
 documentFormatting = false
 
 [language-server.tailwindcss]
-language-id = "typescriptreact"
-command = "hx-tw"
-config = {}
+command = "tailwindcss-language-server"
 args = ["--stdio"]
-timeout = 3
 
 [language-server.eslint]
 command = "vscode-eslint-language-server"

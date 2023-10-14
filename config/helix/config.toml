@@ -1,4 +1,5 @@
-theme = "yo_berry_dark"
+theme = "base16_transparent"
+# icons = "nerdfonts"
 
 [editor]
 color-modes = true
@@ -41,10 +42,6 @@ select = "S"
 [editor.file-picker]
 hidden = false
 
-[editor.explorer]
-column-width = 40
-position = "right"
-
 [editor.whitespace.characters]
 space = "·"
 nbsp = "⍽"
@@ -53,7 +50,7 @@ newline = "⤶"
 
 [editor.lsp]
 display-messages = true
-display-inlay-hints = false
+display-inlay-hints = true
 
 [keys.normal]
 "esc" = ["collapse_selection", "keep_primary_selection"]
@@ -85,14 +82,16 @@ display-inlay-hints = false
 
 [keys.normal.space]
 space = "file_picker"
+e = ":sh helix-exec helix-nnn-open"
+i = ":sh helix-exec helix-filename-to-clipboard"
 n = ":new"
-w = ":w"
 q = ":q"
+w = ":w"
 x = ":buffer-close"
 
 [keys.normal.space.c]
 r = ":config-reload"
-o = ":config-open"
+e = ":config-open"
 w = ":set whitespace.render all"
 W = ":set whitespace.render none"
 i = ":set lsp.display-inlay-hints true"
