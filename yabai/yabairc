@@ -76,7 +76,7 @@ yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^Spotify$" sticky=on manage=off
 yabai -m rule --add app="^Stats$" sticky=on manage=off
 yabai -m rule --add app="^zoom.us$" manage=off
-yabai -m rule --add app="^WhatsApp" manage=off
+yabai -m rule --add app="^WhatsApp$" manage=off
 yabai -m rule --add app="^Dash$" manage=off
 yabai -m rule --add app="^Setapp$" manage=off
 yabai -m rule --add app="^HP Easy Scan$" manage=off

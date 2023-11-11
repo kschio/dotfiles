@@ -27,7 +27,7 @@ auto-format = true
 
 [[language]]
 name = "css"
-language-servers = ["vscode-css-language-server", "tailwindcss"]
+language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 formatter = { command = "prettier", args = ["--parser", "css"] }
 
 [[language]]
@@ -43,24 +43,25 @@ auto-format = true
 
 [[language]]
 name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+language-servers = ["tailwindcss-ls", "typescript-language-server"]
+formatter = { command = 'prettier', args = ["--parser", "javascript"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = ["tailwindcss", "typescript-language-server", "eslint"]
+language-servers = ["tailwindcss-ls", "typescript-language-server", "eslint"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "typescript"
-language-servers = ["tailwindcss", "typescript-language-server", "eslint"]
+language-servers = ["tailwindcss-ls", "typescript-language-server", "eslint"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = ["tailwindcss", "typescript-language-server", "eslint"]
+language-servers = ["tailwindcss-ls", "typescript-language-server", "eslint"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
@@ -74,10 +75,6 @@ args = ["--stdio"]
 
 [language-server.typescript-language-server.config]
 documentFormatting = false
-
-[language-server.tailwindcss]
-command = "tailwindcss-language-server"
-args = ["--stdio"]
 
 [language-server.eslint]
 command = "vscode-eslint-language-server"

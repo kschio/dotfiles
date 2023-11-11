@@ -88,6 +88,8 @@ n = ":new"
 q = ":q"
 w = ":w"
 x = ":buffer-close"
+"U" = "switch_to_uppercase"
+"u" = "switch_to_lowercase"
 
 [keys.normal.space.c]
 r = ":config-reload"
