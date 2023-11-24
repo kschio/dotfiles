@@ -84,14 +84,16 @@ yabai -m rule --add app="^Tower$" manage=off
 yabai -m rule --add app="^Kaleidoscope$" manage=off
 yabai -m rule --add app="^RapidAPI$" manage=off
 yabai -m rule --add app="^Window$" manage=off
+yabai -m rule --add app="Notion" manage=off
+yabai -m rule --add app="NotionQuickAdd" manage=off
 
 # Browser
-yabai -m rule --add app="^Arc$" manage=on
+yabai -m rule --add app="^Arc$" manage=off
 yabai -m rule --add label="Arc PiP" app="^Arc$" title="^$" manage=off
-yabai -m rule --add label="Little Arc Launcher" app="^Arc$" title="^Space 1$" manage=off
-yabai -m rule --add app="^Safari$" manage=on
-yabai -m rule --add app="^Google Chrome$" manage=on border=on
-yabai -m rule --add app="^Firefox$" manage=on border=on
+yabai -m rule --add label="Little Arc Launcher" app="^Arc$" manage=off
+yabai -m rule --add app="^Safari$" manage=off
+yabai -m rule --add app="^Google Chrome$" manage=on
+yabai -m rule --add app="^Firefox$" manage=on
 
 # System
 yabai -m rule --add app="System Information" manage=off
@@ -108,6 +110,7 @@ yabai -m rule --add app="Photo Booth" manage=off
 yabai -m rule --add app="Software Update" manage=off
 yabai -m rule --add app="Reminders" manage=off
 yabai -m rule --add app="System Settings" manage=off
+yabai -m rule --add app="System Preferences" manage=off
 yabai -m rule --add app="Preview" manage=off
 
 # Statusbar spacing
