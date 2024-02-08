@@ -32,6 +32,7 @@ formatter = { command = "prettier", args = ["--parser", "css"] }
 
 [[language]]
 name = "html"
+language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
 formatter = { command = "prettier", args = ["--parser", "html"] }
 auto-format = true
 
@@ -43,27 +44,29 @@ auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = ["tailwindcss-ls", "typescript-language-server"]
-formatter = { command = 'prettier', args = ["--parser", "javascript"] }
+language-servers = ["typescript-language-server", "tailwindcss-ls"]
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-language-servers = ["tailwindcss-ls", "typescript-language-server", "eslint"]
+language-servers = ["typescript-language-server", "eslint", "tailwindcss-ls"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
+block-comment-tokens = { start = "{/*", end = "*/}" }
 
 [[language]]
 name = "typescript"
-language-servers = ["tailwindcss-ls", "typescript-language-server", "eslint"]
+language-servers = ["typescript-language-server", "eslint", "tailwindcss-ls"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = ["tailwindcss-ls", "typescript-language-server", "eslint"]
+language-servers = ["typescript-language-server", "tailwindcss-ls", "eslint"]
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
+block-comment-tokens = { start = "{/*", end = "*/}" }
 
 [language-server.vscode-json]
 command = "vscode-json-language-server"
