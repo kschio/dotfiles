@@ -1,11 +1,3 @@
-#################################
-# SPACE_NUMBER 1: social
-# SPACE_NUMBER 2: browser
-# SPACE_NUMBER 3: coding
-# SPACE_NUMBER 4: design
-# SPACE_NUMBER 5: misc
-#################################
-
 # Move to space
 ctrl + alt - n : yabai -m window --space next; yabai -m space --focus next
 ctrl + alt - p : yabai -m window --space prev; yabai -m space --focus prev
