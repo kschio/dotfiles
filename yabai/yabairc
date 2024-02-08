@@ -86,6 +86,7 @@ yabai -m rule --add app="^RapidAPI$" manage=off
 yabai -m rule --add app="^Window$" manage=off
 yabai -m rule --add app="Notion" manage=off
 yabai -m rule --add app="NotionQuickAdd" manage=off
+yabai -m rule --add app="CleanShot X" manage=off
 
 # Browser
 yabai -m rule --add app="^Arc$" manage=off
