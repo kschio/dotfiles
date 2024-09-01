@@ -1,44 +1,40 @@
 # shortcuts
-alias reload="source ~/.zshrc"
-alias _="sudo"
+alias reload="source ~/.config/fish/config.fish"
 alias g="git"
 alias rr="rm -rf"
 alias nano="hx"
 alias vim="hx"
-alias nvim="hx"
+alias lg="lazygit"
+alias cat="bat"
+
+alias t="tig"
+alias tl="tig log"
+alias tb="tig blame"
+alias tg="tig grep"
+alias ts="tig status"
+alias tsh="tig stash"
 
 # default options
 alias json="json -c"
 alias psgrep="psgrep -i"
 alias rsync="rsync -vh"
 
-# global aliases
-if $(is-supported "alias -g"); then
-  alias -g G="| grep -i"
-  alias -g H="| head"
-  alias -g T="| tail"
-  alias -g L="| less"
-fi
-
 # list declared aliases, functions, paths
-alias aliases="alias | sed 's/=.*//'"
-alias functions="declare -f | grep '^[a-z].* ()' | sed 's/{$//'"
-alias paths='echo -e ${PATH//:/\\n}'
+alias aliases="alias"
+alias functions="functions"
+alias paths="echo \$PATH | tr ' ' '\n'"
 
 # directory listing/traversal
-alias ls="exa --icons --group-directories-first"
-alias ll="exa -l -g -a --icons --git --group-directories-first"
-alias tree="exa -T --icons --git"
-alias lp="stat -c '%a %n' *"
-
-unset LS_COLORS LS_TIMESTYLEISO LS_GROUPDIRSFIRST
-
+alias ls="eza --icons --group-directories-first"
+alias ll="eza -l -g -a --icons --git --group-directories-first"
+alias tree="eza -T --icons --git"
+set -e LS_COLORS
+set -e LS_TIMESTYLEISO
+set -e LS_GROUPDIRSFIRST
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias -- -="cd -"
-alias cd.='cd $(readlink -f .)'
 
 # network
 alias ip="curl -s ipinfo.io | jq -r '.ip'"
@@ -49,3 +45,7 @@ alias hosts="sudo $EDITOR /etc/hosts"
 alias week="date +%V"
 alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
 alias quit="exit"
+
+# alias macOS
+# Sleep now
+alias sleepnow="sudo shutdown -s +0"
