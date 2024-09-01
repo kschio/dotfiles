@@ -2,16 +2,13 @@ local wezterm = require 'wezterm'
 
 local font_size = 14
 local bold = true
-local font_family = ({
-       'MonoLisa', -- [1]
-    })[1]
 
 local options = {}
 if bold then
    options['weight'] = 'Bold'
 end
 
-local font = wezterm.font(font_family, options)
+local font = wezterm.font('MonoLisa', options)
 
 return {
    font      = font,

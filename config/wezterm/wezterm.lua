@@ -2,6 +2,7 @@ local utils = require 'utils'
 
 local modules = utils.map({
    'general',
+   'hotkeys',
    'window',
    'font',
    'theme',

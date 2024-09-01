@@ -7,7 +7,7 @@ local window_padding = {
    left = "1cell",
    right = "1cell",
    top = "1cell",
-   bottom = "1cell",
+   bottom = "0cell",
 }
 
 local M = {
