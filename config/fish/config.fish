@@ -31,6 +31,8 @@ fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path $HOME/.pnpm
 fish_add_path $HOME/.config/emacs/bin
+fish_add_path $HOME/.config/nvim/bin
+fish_add_path $HOME/.gem/ruby/3.3.0/bin
 
 # android sdk
 set -x ANDROID_SDK_ROOT $HOME/Library/Android/sdk
