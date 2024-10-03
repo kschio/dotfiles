@@ -1,3 +1,5 @@
+[core]
+    pager = delta
 [user]
 	name = Kevin Scheffelmeier
 	email = kevin@ksch.io
@@ -8,14 +10,20 @@
 [commit]
 	template = /Users/ksch/.git-commit-template.txt
 	cleanup = strip
-[pager]
-  diff = diff-so-fancy | less --tabs=1,5 -RFX
-  show = diff-so-fancy | less --tabs=1,5 -RFX
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    line-numbers = true
+[interactive]
+    diffFilter = delta --color-only
 [pull]
 	rebase = false
 [push]
 	default = current
 	followTags = true
 	autoSetupRemote = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
 [rerere]
 	enabled = true
