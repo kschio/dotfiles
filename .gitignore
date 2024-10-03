@@ -6,3 +6,4 @@ nvim/plugin/packer_compiled.lua
 __pycache__
 credentials.toml
 config/lazygit/state.yml
+config/fish/private.fish
