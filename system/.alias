@@ -2,8 +2,8 @@
 alias reload="source ~/.config/fish/config.fish"
 alias g="git"
 alias rr="rm -rf"
-alias nano="hx"
-alias vim="hx"
+alias nano="nvim"
+alias vim="nvim"
 alias lg="lazygit"
 alias cat="bat"
 
