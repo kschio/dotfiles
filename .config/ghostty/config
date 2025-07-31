@@ -1,0 +1,75 @@
+shell-integration = fish
+shell-integration-features = cursor, sudo, title
+
+# Background
+background-opacity = 1
+background-blur-radius = 100
+
+# Font settings
+font-family = "TX-02 SemiCondensed"
+font-thicken = false
+font-size = 14
+
+# Base colors
+# background = #111111
+# foreground = #eeeeee
+
+# Terminal colors (ANSI)
+# palette = 0=#4f4f4f
+# palette = 1=#fa6c60
+# palette = 2=#a8ff60
+# palette = 3=#fffeb7
+# palette = 4=#96cafe
+# palette = 5=#fa73fd
+# palette = 6=#c6c5fe
+# palette = 7=#efedef
+# palette = 8=#7b7b7b
+# palette = 9=#fcb6b0
+# palette = 10=#cfffab
+# palette = 11=#ffffcc
+# palette = 12=#b5dcff
+# palette = 13=#fb9cfe
+# palette = 14=#e0e0fe
+# palette = 15=#ffffff
+
+
+# Selection and cursor
+# selection-background = #0090ff
+# selection-foreground = #eeeeee
+# cursor-color = #0090ff
+cursor-style = block
+
+# Theme
+theme = light:Material,dark:Oxocarbon
+
+# Window padding
+window-padding-x = 12
+window-padding-y = 12
+window-padding-balance = true
+
+# Cell adjustments
+adjust-cell-height = 2%
+
+# Mouse settings
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 6
+
+# Window state
+window-save-state = always
+
+# Text Behavior
+macos-option-as-alt = true
+keybind = cmd+right=text:\x05
+keybind = cmd+left=text:\x01
+keybind = alt+left=esc:b
+keybind = alt+right=esc:f
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+
+# MacOS
+macos-titlebar-style = tabs
+macos-option-as-alt = true
+
+# Shader
+# custom-shader = ~/.config/ghostty/shaders/bloom.glsl
+keybind = shift+enter=text:\n

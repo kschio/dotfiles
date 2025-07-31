@@ -1,0 +1,6 @@
+.DS_Store
+.gitconfig
+.git
+.gitignore
+ backup/
+ tmp_config.json
