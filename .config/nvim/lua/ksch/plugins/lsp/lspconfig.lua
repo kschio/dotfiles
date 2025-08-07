@@ -20,49 +20,61 @@ return {
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
 				local opts = { buffer = ev.buf, silent = true }
 
+				-- Go to navigation (non-leader)
 				opts.desc = "Go to declaration"
-				keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+				keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
-				opts.desc = "Show LSP implementations"
-				keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
+				opts.desc = "Go to implementation"
+				keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
 
-				opts.desc = "Show LSP type definitions"
-				keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
+				opts.desc = "Go to type definition"
+				keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
 
 				opts.desc = "Peek type definition"
-				keymap.set("n", "gT", "<cmd>Lspsaga peek_type_definition<CR>", opts) -- peek type definition
+				keymap.set("n", "gT", "<cmd>Lspsaga peek_type_definition<CR>", opts)
 
-				opts.desc = "See available code actions"
-				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+				-- Code actions (c for code)
+				opts.desc = "Code actions"
+				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 
-				opts.desc = "Smart rename"
-				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+				opts.desc = "Code rename"
+				keymap.set("n", "<leader>cr", vim.lsp.buf.rename, opts)
 
-				opts.desc = "Show buffer diagnostics"
-				keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+				opts.desc = "Code format"
+				keymap.set("n", "<leader>cf", vim.lsp.buf.format, opts)
 
-				opts.desc = "Show line diagnostics"
-				keymap.set("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show diagnostics for line
+				-- LSP info (l for LSP)
+				opts.desc = "LSP buffer diagnostics"
+				keymap.set("n", "<leader>lD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
 
-				opts.desc = "Go to previous diagnostic"
-				keymap.set("n", "<leader>dp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to next diagnostic in buffer
-				-- keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+				opts.desc = "LSP line diagnostics"
+				keymap.set("n", "<leader>ll", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 
-				opts.desc = "Go to next diagnostic"
-				keymap.set("n", "<leader>dn", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+				opts.desc = "LSP workspace diagnostics"
+				keymap.set("n", "<leader>ld", "<cmd>Telescope diagnostics<CR>", opts)
 
-				opts.desc = "Go to previous diagnostic"
-				keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to next diagnostic in buffer
-				-- keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+				opts.desc = "LSP info"
+				keymap.set("n", "<leader>lI", "<cmd>LspInfo<CR>", opts)
 
-				opts.desc = "Go to next diagnostic"
-				keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+				opts.desc = "LSP restart"
+				keymap.set("n", "<leader>lR", ":LspRestart<CR>", opts)
 
-				opts.desc = "Show documentation for what is under cursor"
-				keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+				-- Diagnostic navigation (bracket navigation)
+				opts.desc = "Previous diagnostic"
+				keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 
-				opts.desc = "Restart LSP"
-				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+				opts.desc = "Next diagnostic"
+				keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+
+				-- Documentation
+				opts.desc = "Hover documentation"
+				keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+
+				-- UI toggles
+				opts.desc = "Toggle inlay hints"
+				keymap.set("n", "<leader>ui", function()
+					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+				end, opts)
 			end,
 		})
 
@@ -79,10 +91,10 @@ return {
 		vim.diagnostic.config({
 			signs = {
 				text = {
-					[vim.diagnostic.severity.ERROR] = "",
-					[vim.diagnostic.severity.WARN] = "",
+					[vim.diagnostic.severity.ERROR] = "",
+					[vim.diagnostic.severity.WARN] = "",
 					[vim.diagnostic.severity.INFO] = "󰠠",
-					[vim.diagnostic.severity.HINT] = "",
+					[vim.diagnostic.severity.HINT] = "",
 				},
 				numhl = {
 					[vim.diagnostic.severity.WARN] = "WarningMsg",
