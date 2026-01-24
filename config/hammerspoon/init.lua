@@ -63,6 +63,23 @@ PaperWM:bindHotkeys({
 
 PaperWM:start()
 
+-- Auto-scroll to focused window on Cmd+Tab (only if off-screen)
+local appWatcher = hs.application.watcher.new(function(appName, eventType, app)
+  if eventType == hs.application.watcher.activated then
+    hs.timer.doAfter(0.05, function()
+      local win = hs.window.focusedWindow()
+      if win then
+        local wf = win:frame()
+        local sf = win:screen():frame()
+        if wf.x < sf.x or wf.x + wf.w > sf.x + sf.w then
+          PaperWM:focusWindow(win)
+        end
+      end
+    end)
+  end
+end)
+appWatcher:start()
+
 -- FocusMode - dim unfocused windows
 FocusMode = hs.loadSpoon("FocusMode")
 FocusMode.dimAlpha = 0.4
