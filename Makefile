@@ -91,6 +91,8 @@ hammerspoon:
 		git clone https://github.com/mogenson/PaperWM.spoon $(XDG_CONFIG_HOME)/hammerspoon/Spoons/PaperWM.spoon
 	test -d $(XDG_CONFIG_HOME)/hammerspoon/Spoons/WarpMouse.spoon || \
 		git clone https://github.com/mogenson/WarpMouse.spoon $(XDG_CONFIG_HOME)/hammerspoon/Spoons/WarpMouse.spoon
+	test -d $(XDG_CONFIG_HOME)/hammerspoon/Spoons/FocusMode.spoon || \
+		git clone https://github.com/selimacerbas/FocusMode.spoon $(XDG_CONFIG_HOME)/hammerspoon/Spoons/FocusMode.spoon
 
 test:
 	eval $$(fnm env); bats test
