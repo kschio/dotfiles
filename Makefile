@@ -15,7 +15,7 @@ macos: sudo core-macos packages link
 
 linux: core-linux link
 
-core-macos: brew bash git npm ruby rust
+core-macos: brew bash git
 
 core-linux:
 	apt-get update
@@ -34,7 +34,7 @@ ifndef GITHUB_ACTION
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 endif
 
-packages: brew-packages cask-apps node-packages rust-packages
+packages: brew-packages cask-apps bun-packages pnpm-packages
 
 link: stow-$(OS)
 	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then \
@@ -71,29 +71,26 @@ endif
 git: brew
 	brew install git git-extras
 
-npm: brew-packages
-	fnm install --lts
-
-ruby: brew
-	brew install ruby
-
-rust: brew
-	brew install rust
-
 brew-packages: brew
 	brew bundle --file=$(DOTFILES_DIR)/install/Brewfile || true
 
-cask-apps: brew
+cask-apps: brew hammerspoon
 	brew bundle --file=$(DOTFILES_DIR)/install/Caskfile || true
-	defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
-	for EXT in $$(cat install/Codefile); do code --install-extension $$EXT; done
 	xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
-node-packages: npm
-	eval $$(fnm env); npm install -g $(shell cat install/npmfile)
+bun-packages:
+	xargs bun install -g < $(DOTFILES_DIR)/install/bunfile
 
-rust-packages: rust
-	cargo install $(shell cat install/Rustfile)
+pnpm-packages:
+	xargs pnpm add -g < $(DOTFILES_DIR)/install/pnpmfile
+
+hammerspoon:
+	defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+	mkdir -p $(XDG_CONFIG_HOME)/hammerspoon/Spoons
+	test -d $(XDG_CONFIG_HOME)/hammerspoon/Spoons/PaperWM.spoon || \
+		git clone https://github.com/mogenson/PaperWM.spoon $(XDG_CONFIG_HOME)/hammerspoon/Spoons/PaperWM.spoon
+	test -d $(XDG_CONFIG_HOME)/hammerspoon/Spoons/WarpMouse.spoon || \
+		git clone https://github.com/mogenson/WarpMouse.spoon $(XDG_CONFIG_HOME)/hammerspoon/Spoons/WarpMouse.spoon
 
 test:
 	eval $$(fnm env); bats test

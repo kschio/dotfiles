@@ -1,0 +1,9 @@
+git:
+  paging:
+    colorArg: always
+    pager: bunx critique
+
+keybinding:
+  universal:
+    gotoTop: "g"
+    gotoBottom: "G"

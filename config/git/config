@@ -8,7 +8,7 @@
 	smudge = git-lfs smudge %f
 	required = true
 [commit]
-	template = /Users/ksch/.git-commit-template.txt
+	template = ~/.config/git/.git-commit-template.txt
 	cleanup = strip
 [delta]
     navigate = true  # use n and N to move between diff sections

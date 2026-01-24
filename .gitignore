@@ -7,3 +7,16 @@ __pycache__
 credentials.toml
 config/lazygit/state.yml
 config/fish/private.fish
+
+# zed caches/data (not config)
+config/zed/conversations/
+config/zed/embeddings/
+config/zed/prompts/
+config/zed/copilot/
+config/zed/extensions/
+config/zed/node/
+config/zed/*.db
+config/zed/*.mdb
+config/zed/*.log
+config/zed/*.tmp
+config/zed/*.bak
