@@ -1,29 +1,25 @@
-<img alt="dotfiles-banner" src="https://user-images.githubusercontent.com/1451664/232234046-0aaf44d3-bfa9-4812-b4d0-043e99542885.png">
+# dotfiles
 
-<p style="text-align: center;">Feel free to use at your own risk.</p>
+personal macos configuration. uses [gnu stow](https://www.gnu.org/software/stow/) to symlink configs.
 
-## Installation
-
-1. First
+## install
 
 ```bash
+# prerequisites
 sudo softwareupdate -i -a
 xcode-select --install
-```
 
-2. Second
-
-```bash
+# clone and install
 git clone https://github.com/kschio/dotfiles ~/.dotfiles
-```
-
-3. Third
-
-```bash
 cd ~/.dotfiles
 make
 ```
 
-### Credits
+## structure
 
-Inspired by [webpro](https://github.com/webpro/dotfiles) and various other sources on GitHub.
+```
+config/   → ~/.config/   (fish, nvim, zed, hammerspoon, etc.)
+runcom/   → ~/           (.alias)
+install/  → package lists (brew, cask, bun, pnpm)
+bin/      → utility scripts
+```
