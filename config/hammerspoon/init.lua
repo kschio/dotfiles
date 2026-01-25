@@ -13,7 +13,7 @@ hs.window.animationDuration = 0
 PaperWM.window_filter = hs.window.filter.new(true)
 
 PaperWM.window_gap = 8
-PaperWM.window_ratios = { 0.3, 0.5, 0.7 }
+PaperWM.window_ratios = { 0.5, 0.67, 1.0 }
 PaperWM.swipe_fingers = 3
 PaperWM.drag_window = { "alt", "ctrl" }
 PaperWM.lift_window = { "alt", "ctrl", "shift" }
