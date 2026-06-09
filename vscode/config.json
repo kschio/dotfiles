@@ -1,0 +1,280 @@
+{
+  "editor.fontFamily": "Cartograph CF",
+  "editor.fontSize": 15,
+  "editor.fontWeight": "normal",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 36,
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "off",
+  "editor.renderControlCharacters": false,
+  "editor.minimap.enabled": false,
+  "editor.insertSpaces": true,
+  "editor.snippetSuggestions": "top",
+  "editor.autoIndent": "none",
+  "editor.matchBrackets": "always",
+  "editor.occurrencesHighlight": false,
+  "editor.overviewRulerBorder": false,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.renderLineHighlight": "all",
+  "editor.roundedSelection": false,
+  "editor.glyphMargin": false,
+  "editor.suggestSelection": "first",
+  "editor.largeFileOptimizations": false,
+  "editor.renderWhitespace": "none",
+  "editor.wordWrap": "on",
+  "editor.colorDecorators": false,
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.links": false,
+  "editor.quickSuggestionsDelay": 0,
+  "editor.inlineSuggest.enabled": true,
+  "editor.folding": false,
+  "editor.guides.indentation": false,
+  "editor.linkedEditing": true,
+
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+
+  "disableLigatures.mode": "Cursor",
+
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.icons": false,
+
+  "eslint.alwaysShowStatus": true,
+
+  "explorer.openEditors.visible": 0,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.decorations.badges": false,
+
+  "problems.decorations.enabled": false,
+
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelScrollSensitivity": 2,
+  "editor.scrollBeyondLastLine": false,
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorWidth": 2,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.accessibilitySupport": "off",
+
+  "terminal.integrated.fontFamily": "'LigaSFMonoNerdFont-Regular'",
+  "terminal.integrated.macOptionIsMeta": true,
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.cursorStyle": "line",
+
+  "workbench.editor.showTabs": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": false,
+  "workbench.sideBar.location": "right",
+  "workbench.tips.enabled": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.tree.indent": 10,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.list.smoothScrolling": true,
+
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": true,
+
+  "window.titleBarStyle": "custom",
+  "window.nativeTabs": false,
+
+  "files.hotExit": "onExit",
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.html": "html"
+  },
+  "files.exclude": {
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.next": true,
+    "jspm_packages": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true,
+    "**/vendor": true,
+    "**/gems": true,
+    "**/db": true,
+    "**/yarn.lock": true,
+    "**/.git": true,
+    "**/.github": true,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.next": true,
+    "**/.cache": true,
+    "**/.pnpm": true,
+    "**/.vscode": true,
+    "**/.yarn": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/out/**": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true
+  },
+
+  "atomKeymap.promptV3Features": true,
+  "simpleIcons.hideArrows": false,
+  "css.validate": false,
+  "scss.validate": false,
+  "javascript.validate.enable": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+
+  "telemetry.telemetryLevel": "off",
+
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onSave",
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "json5"
+  ],
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "turboConsoleLog.logMessagePrefix": "DEBUG",
+  "turboConsoleLog.quote": "'",
+  "javascript.format.enable": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "java.project.importHint": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "workbench.fontAliasing": "antialiased",
+  "security.workspace.trust.untrustedFiles": "open",
+  "typescript.format.enable": false,
+  "gitlens.defaultDateFormat": "DD.MM.YYYY hh:mm",
+  "gitlens.defaultDateShortFormat": "DD.MM.YYYY",
+  "jest.autoRun": "off",
+  "sort-imports.cache-package-json-config-checks": false,
+  "sort-imports.on-save": false,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.iconTheme": "file-icons-colourless",
+  "workbench.colorTheme": "Sequoia Moonlight",
+  "editor.tokenColorCustomizations": {
+    "[Sequoia Moonlight][Sequoia Monochrome]": {
+      "textMateRules": [
+        {
+          "scope": [
+            "comment",
+            "variable",
+            "variable.other.object.js",
+            "variable.other.object.property",
+            "variable.language",
+            "punctuation.accessor",
+            "markup.changed",
+            "markup.deleted.diff",
+            "markup.inserted.diff",
+            "keyword",
+            "keyword.operator.relational",
+            "keyword.operator.comparison",
+            "keyword.control.flow.js",
+            "keyword.control.flow.ts",
+            "keyword.control.flow.tsx",
+            "keyword.control.ruby",
+            "keyword.control.module.ruby",
+            "keyword.control.class.ruby",
+            "keyword.control.def.ruby",
+            "keyword.control.loop.js",
+            "keyword.control.loop.ts",
+            "keyword.control.import.js",
+            "keyword.control.import.ts",
+            "keyword.control.import.tsx",
+            "keyword.control.from.js",
+            "keyword.control.from.ts",
+            "keyword.control.from.tsx",
+            "keyword.operator.instanceof.js",
+            "keyword.operator.expression.instanceof.ts",
+            "keyword.operator.expression.instanceof.tsx",
+            "support.constant",
+            "support.function",
+            "entity.other.attribute-name",
+            "entity.other.inherited-class",
+            "entity.name.function",
+            "entity.name.tag.doctype",
+            "entity.name.function",
+            "meta.directive.vue",
+            "meta.diff.header.git",
+            "meta.diff.header.from-file",
+            "meta.diff.header.to-file",
+            "meta.var.expr",
+            "meta.delimiter.period",
+            "meta.selector",
+            "meta.tag.sgml.doctype",
+            "meta.tag.sgml.doctype.html",
+            "meta.class meta.method.declaration meta.var.expr storage.type.js",
+            "storage",
+            "storage.type.property.js",
+            "storage.type.property.ts",
+            "storage.type.property.tsx",
+            "source.elixir .punctuation.binary.elixir",
+            "source.go keyword.package.go",
+            "source.go keyword.import.go",
+            "source.go keyword.function.go",
+            "source.go keyword.type.go",
+            "source.go keyword.struct.go",
+            "source.go keyword.interface.go",
+            "source.go keyword.const.go",
+            "source.go keyword.var.go",
+            "source.go keyword.map.go",
+            "source.go keyword.channel.go",
+            "source.go keyword.control.go",
+            "string.quoted.docstring.multi.python"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
+    }
+  },
+  "workbench.productIconTheme": "icons-carbon",
+  "Lua.telemetry.enable": false,
+  "vsc-fnlfmt.execPath": "/opt/homebrew/bin/fnlfmt"
+}

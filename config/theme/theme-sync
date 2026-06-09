@@ -1,0 +1,60 @@
+#!/bin/sh
+# theme-sync — point herdr at the oxocarbon dark/light palette and reload it.
+#
+# usage: theme-sync [dark|light]
+#   no argument: read the current macOS appearance.
+#
+# ghostty follows the appearance on its own (theme = light:...,dark:...).
+# nvim reads the cached mode below: new instances pick it up at startup,
+# running ones on the next FocusGained.
+set -eu
+
+config_home="${XDG_CONFIG_HOME:-$HOME/.config}"
+cache_home="${XDG_CACHE_HOME:-$HOME/.cache}"
+theme_dir="$config_home/theme"
+herdr_config="$config_home/herdr/config.toml"
+mode_file="$cache_home/theme-mode"
+herdr_bin="$(command -v herdr 2>/dev/null || echo "$HOME/.local/bin/herdr")"
+
+mode="${1:-}"
+if [ -z "$mode" ]; then
+	if [ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" = "Dark" ]; then
+		mode=dark
+	else
+		mode=light
+	fi
+fi
+
+case "$mode" in
+	dark | light) ;;
+	*)
+		echo "usage: theme-sync [dark|light]" >&2
+		exit 2
+		;;
+esac
+
+block="$theme_dir/oxocarbon-$mode.toml"
+[ -f "$block" ] || {
+	echo "theme-sync: missing palette $block" >&2
+	exit 1
+}
+
+# Replace the [theme] / [theme.custom] tables with the chosen palette and leave
+# everything else (onboarding, [ui], anything herdr writes) untouched.
+if [ -f "$herdr_config" ]; then
+	tmp="$(mktemp)"
+	awk -v block="$block" '
+		/^\[theme/ {
+			in_theme = 1
+			if (!done) { while ((getline line < block) > 0) print line; print ""; done = 1 }
+			next
+		}
+		/^\[/ { in_theme = 0 }
+		!in_theme { print }
+	' "$herdr_config" >"$tmp"
+	mv "$tmp" "$herdr_config"
+	[ -x "$herdr_bin" ] && "$herdr_bin" server reload-config >/dev/null 2>&1 || true
+fi
+
+mkdir -p "$cache_home"
+printf '%s\n' "$mode" >"$mode_file"

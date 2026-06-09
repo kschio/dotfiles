@@ -1,0 +1,35 @@
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+
+# dev
+cask "android-studio"
+cask "cursor"
+cask "hammerspoon"
+cask "karabiner-elements"
+cask "charles"
+cask "zulu@17"
+
+# apps
+cask "discord"
+cask "dropbox"
+cask "figma"
+cask "notion"
+cask "obsidian"
+cask "rustdesk"
+cask "slack"
+cask "spotify"
+cask "transmit"
+cask "whatsapp"
+cask "zoom"
+
+# utils
+cask "cleanmymac"
+cask "hiddenbar"
+cask "lookaway"
+
+# fonts
+cask "font-3270-nerd-font"
+cask "font-fira-code"
+cask "font-hack"
+cask "font-hack-nerd-font"
+cask "font-symbols-only-nerd-font"

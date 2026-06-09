@@ -1,0 +1,63 @@
+[
+  {
+    "bindings": {
+      "cmd-e": "workspace::ToggleRightDock",
+      "cmd-b": "workspace::ToggleLeftDock",
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-k cmd-e": "project_panel::ToggleFocus",
+      "cmd-i": "agent::NewThread",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "not_editing || (Editor && vim_mode == normal)",
+    "bindings": {
+      "space ,": "tab_switcher::Toggle",
+      "space space": "file_finder::Toggle",
+      "space e": "workspace::ToggleRightDock",
+      "space a": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "shift-k": "editor::Hover",
+      "space c a": "editor::ToggleCodeActions",
+      "space c f": "editor::Format",
+      "space c r": "editor::Rename",
+      "space c d": "editor::GoToDiagnostic",
+      "space c s": "outline::Toggle",
+      "space s s": "project_symbols::Toggle",
+      "space b d": "pane::CloseActiveItem",
+      "space g d": "editor::GoToDefinition",
+      "space g r": "editor::FindAllReferences",
+      "space s g": "pane::DeploySearch",
+      "space w": "workspace::Save",
+      "ctrl-n": "editor::SelectNext",
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "x": "project_panel::Cut"
+    }
+  }
+]

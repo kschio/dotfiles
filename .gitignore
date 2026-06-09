@@ -1,0 +1,56 @@
+.vscode
+.DS_Store
+system/.custom
+system/.exports
+nvim/plugin/packer_compiled.lua
+__pycache__
+credentials.toml
+config/lazygit/state.yml
+# sensitive - never commit
+config/fish/private.fish
+config/fish/*private*
+**/private.fish
+**/*secret*
+**/*credentials*
+config/fish/fish_variables
+config/fish/completions/
+config/fish/conf.d/
+# fisher-managed (reinstall via: fisher install < fish_plugins)
+config/fish/functions/_fzf_*.fish
+config/fish/functions/fisher.fish
+config/fish/functions/fzf_configure_bindings.fish
+config/fish/functions/__git.*.fish
+config/fish/functions/gbage.fish
+config/fish/functions/gbda.fish
+config/fish/functions/gdv.fish
+config/fish/functions/gignored.fish
+config/fish/functions/glp.fish
+config/fish/functions/grel.fish
+config/fish/functions/grename.fish
+config/fish/functions/grt.fish
+config/fish/functions/gtest.fish
+config/fish/functions/gtl.fish
+config/fish/functions/gunwip.fish
+config/fish/functions/gwip.fish
+config/fish/functions/git_current_branch.fish
+config/fish/functions/git_develop_branch.fish
+config/fish/functions/git_feature_branch_prepend.fish
+config/fish/functions/git_main_branch.fish
+
+# hammerspoon spoons (cloned via Makefile)
+config/hammerspoon/Spoons/
+**/CLAUDE.md
+
+# zed caches/data (not config)
+config/zed/conversations/
+config/zed/embeddings/
+config/zed/prompts/
+config/zed/copilot/
+config/zed/extensions/
+config/zed/node/
+config/zed/*.db
+config/zed/*.mdb
+config/zed/*.log
+config/zed/*.tmp
+config/zed/*.bak
+
