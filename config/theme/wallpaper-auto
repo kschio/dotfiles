@@ -1,0 +1,93 @@
+#!/bin/sh
+# wallpaper-auto — set a light/dark (or single) wallpaper across ALL spaces.
+#
+# usage: wallpaper-auto <light-image> [dark-image]
+#   one image  -> used for both appearances
+#   two images -> light variant and dark variant
+#
+# builds a dynamic .heic (via macOS ImageIO, no third-party tool) and points
+# every space/display in the wallpaper store at it, so macOS switches it
+# natively with the system appearance on every space.
+set -eu
+
+[ $# -ge 1 ] || {
+	echo "usage: wallpaper-auto <light-image> [dark-image]" >&2
+	exit 2
+}
+light="$1"
+dark="${2:-$1}"
+for img in "$light" "$dark"; do
+	[ -f "$img" ] || {
+		echo "wallpaper-auto: no such file: $img" >&2
+		exit 1
+	}
+done
+
+out="$HOME/.local/share/theme/wallpaper.heic"
+store="$HOME/Library/Application Support/com.apple.wallpaper/Store/Index.plist"
+[ -f "$store" ] || {
+	echo "wallpaper-auto: wallpaper store not found (needs macOS 14+)" >&2
+	exit 1
+}
+mkdir -p "$(dirname "$out")"
+
+# 1. build the dynamic light/dark .heic (image 0 = light, image 1 = dark)
+LIGHT="$light" DARK="$dark" OUT="$out" swift - <<'SWIFT'
+import Foundation
+import ImageIO
+import UniformTypeIdentifiers
+let env = ProcessInfo.processInfo.environment
+func load(_ p: String) -> CGImage {
+	guard let s = CGImageSourceCreateWithURL(URL(fileURLWithPath: p) as CFURL, nil),
+	      let i = CGImageSourceCreateImageAtIndex(s, 0, nil)
+	else {
+		FileHandle.standardError.write("wallpaper-auto: cannot read \(p)\n".data(using: .utf8)!)
+		exit(1)
+	}
+	return i
+}
+let light = load(env["LIGHT"]!), dark = load(env["DARK"]!)
+let apr = (try! PropertyListSerialization.data(fromPropertyList: ["l": 0, "d": 1], format: .binary, options: 0)).base64EncodedString()
+let meta = CGImageMetadataCreateMutable()
+CGImageMetadataRegisterNamespaceForPrefix(meta, "http://ns.apple.com/namespace/1.0/" as CFString, "apple_desktop" as CFString, nil)
+_ = CGImageMetadataSetValueWithPath(meta, nil, "apple_desktop:apr" as CFString, apr as CFString)
+let dest = CGImageDestinationCreateWithURL(URL(fileURLWithPath: env["OUT"]!) as CFURL, UTType.heic.identifier as CFString, 2, nil)!
+CGImageDestinationAddImageAndMetadata(dest, light, meta, nil)
+CGImageDestinationAddImage(dest, dark, nil)
+guard CGImageDestinationFinalize(dest) else {
+	FileHandle.standardError.write("wallpaper-auto: failed to write .heic\n".data(using: .utf8)!)
+	exit(1)
+}
+SWIFT
+
+# 2. repoint every image entry in the wallpaper store at the new .heic
+OUT="$out" python3 - "$store" <<'PY'
+import sys, os, plistlib, pathlib
+store = sys.argv[1]
+cfg = plistlib.dumps({"type": "imageFile", "url": {"relative": pathlib.Path(os.environ["OUT"]).as_uri()}}, fmt=plistlib.FMT_BINARY)
+with open(store, "rb") as f:
+    data = plistlib.load(f)
+count = 0
+def walk(o):
+    global count
+    if isinstance(o, dict):
+        if o.get("Provider") == "com.apple.wallpaper.choice.image" and "Configuration" in o:
+            o["Configuration"] = cfg
+            count += 1
+        for v in o.values():
+            walk(v)
+    elif isinstance(o, list):
+        for v in o:
+            walk(v)
+walk(data)
+if count == 0:
+    sys.exit("wallpaper-auto: no image wallpaper in the store. pick any image in System Settings > Wallpaper once, then rerun")
+tmp = store + ".tmp"
+with open(tmp, "wb") as f:
+    plistlib.dump(data, f, fmt=plistlib.FMT_BINARY)
+os.replace(tmp, store)
+PY
+
+# 3. reload the wallpaper agent so all spaces pick it up
+killall WallpaperAgent 2>/dev/null || true
+echo "wallpaper set on all spaces — light: $light  dark: $dark"
